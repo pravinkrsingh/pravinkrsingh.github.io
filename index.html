@@ -143,8 +143,8 @@ h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--a
 .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
 .card h4{margin:0 0 12px;font-size:14px;display:flex;align-items:center;gap:8px}
 .card h4 .ico{width:17px;height:17px;color:var(--accent)}
-.trow{display:grid;grid-template-columns:82px 1fr;gap:10px;padding:7px 0;align-items:start}
-.trow .lbl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:3px}
+.trow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:7px 0;align-items:start}
+.trow .lbl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:4px;line-height:1.35;overflow-wrap:break-word}
 .certs{list-style:none;margin:0;padding:0}
 .certs li{display:flex;gap:11px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
 .certs li.more{display:none}
@@ -174,6 +174,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .nav-links a{display:none} .pcard{max-width:420px}
 }
 @media (max-width:600px){
+  .trow{grid-template-columns:1fr;gap:4px}
   .cols2,.cols3{grid-template-columns:1fr} form{grid-template-columns:1fr}
   .job{grid-template-columns:1fr} .logo{display:none}
 }
@@ -262,7 +263,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
    SHEET_API: paste your Apps Script Web App URL here (ends in /exec) to load content
    from your Google Sheet and receive contact-form messages. Leave empty to use the
    built-in content below. */
-const SHEET_API = "https://script.google.com/macros/s/AKfycby4CcNEA4_ENInRuhc5BWATWP8qgsCa9dTd7ebXpEtQTeZ4mhXKh6XCRdOhB646hdxlRw/exec";
+const SHEET_API = "";
 
 /* Built-in content (used when SHEET_API is empty or unreachable) */
 const DEFAULT_DATA = {
