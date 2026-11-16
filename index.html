@@ -4,21 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pravin Kumar Singh · Digital Health & Learning Technology</title>
-<meta name="description" content="Pravin Kumar Singh: 23 years in technology, 12 supporting India's National AIDS Control Programme. Learning platforms, web portals, ODK field-data tools, automation and AI-enabled programme technology.">
+<meta name="description" content="Pravin Kumar Singh: 23 years in technology, 12 on India's National AIDS Control Programme. Learning platforms, web portals, ODK field tools, automation and AI-enabled programme technology.">
 <style>
 :root{
   --accent:#2E5FA3; --accent-2:#1F4A86; --accent-soft:#EAF0F8; --navy:#14284A;
   --bg:#F5F7FB; --card:#FFFFFF; --ink:#17243A; --muted:#5A6880; --line:#E1E7F0;
   --chip:#EEF3FA; --chip-ink:#23497F; --ok:#2E8B57;
   --shadow:0 1px 2px rgba(20,40,74,.04),0 4px 14px rgba(20,40,74,.05);
-  --shadow-hover:0 2px 4px rgba(20,40,74,.06),0 10px 24px rgba(20,40,74,.09);
-  --font:"Segoe UI",Calibri,system-ui,-apple-system,Roboto,Arial,sans-serif;
-  --r:12px;
+  --shadow-hover:0 2px 4px rgba(20,40,74,.06),0 12px 26px rgba(20,40,74,.10);
+  --font:"Segoe UI",Calibri,system-ui,-apple-system,Roboto,Arial,sans-serif; --r:14px;
 }
 [data-theme="dark"]{
   --accent:#86ABE3; --accent-2:#A9C3EC; --accent-soft:#1B2A43; --navy:#0B1527;
   --bg:#0E1626; --card:#152137; --ink:#E5ECF6; --muted:#9AA8BE; --line:#22324C;
-  --chip:#1D2D49; --chip-ink:#C7D7F0; --shadow:0 1px 2px rgba(0,0,0,.3); --shadow-hover:0 6px 18px rgba(0,0,0,.35);
+  --chip:#1D2D49; --chip-ink:#C7D7F0; --shadow:0 1px 2px rgba(0,0,0,.3); --shadow-hover:0 8px 20px rgba(0,0,0,.4);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
@@ -26,18 +25,21 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 a{color:var(--accent)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
-.grid{display:grid;gap:12px}
+.lift:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.grid{display:grid;gap:14px}
 .cols2{grid-template-columns:repeat(2,1fr)} .cols3{grid-template-columns:repeat(3,1fr)}
 .small{font-size:13px;color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
 .chip{background:var(--chip);color:var(--chip-ink);font-size:12px;padding:2px 9px;border-radius:999px;white-space:nowrap}
-.kicker{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+.linkbtn:hover{text-decoration:underline}
 
 /* nav */
 header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
 .brand{font-weight:700;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:9px}
-.mono{width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;letter-spacing:.02em}
+.mono{width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
 [data-theme="dark"] .mono{color:#0E1626}
 .nav-links{display:flex;gap:16px;align-items:center}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:13.5px}
@@ -45,97 +47,119 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;h
 .icon-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;width:32px;height:32px;cursor:pointer;display:grid;place-items:center}
 
 /* hero */
-.hero{padding:40px 0 34px;background:radial-gradient(700px 300px at 95% -10%,var(--accent-soft),transparent 70%),radial-gradient(500px 260px at -5% 110%,var(--accent-soft),transparent 70%)}
-.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+.hero{padding:44px 0 40px;background:radial-gradient(720px 320px at 100% 0%,var(--accent-soft),transparent 70%),radial-gradient(520px 260px at 0% 100%,var(--accent-soft),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:34px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);color:var(--accent-2);border-radius:999px;padding:3px 11px;font-size:12px;font-weight:600}
 .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 20%,transparent)}
-h1{font-size:clamp(32px,4.6vw,44px);line-height:1.08;margin:12px 0 6px;letter-spacing:-.6px}
+h1{font-size:clamp(34px,5vw,48px);line-height:1.05;margin:14px 0 8px;letter-spacing:-.8px}
 h1 span{color:var(--accent)}
-.headline{font-size:16.5px;color:var(--accent-2);margin:0 0 12px;font-weight:600}
-.summary{margin:0 0 10px}
-.open-to{font-size:13px;color:var(--muted);margin:0;padding-left:10px;border-left:3px solid var(--accent-soft)}
-.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.btn{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:border-color .2s,transform .15s}
+.headline{font-size:18px;color:var(--accent-2);margin:0;font-weight:600}
+.tagline{font-size:13.5px;color:var(--muted);margin:4px 0 14px}
+.summary{margin:0 0 14px;max-width:600px;font-size:15px}
+.open{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.open b{font-weight:600;margin-right:2px}
+.open .chip{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:border-color .2s,transform .15s}
 .btn:hover{border-color:var(--accent);transform:translateY(-1px)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 [data-theme="dark"] .btn.primary{color:#0E1626}
-.side{display:grid;gap:10px}
-.now h3{margin:5px 0 2px;font-size:15.5px}
-.kicker.live::before{content:"● ";color:var(--ok)}
-.feat{background:linear-gradient(145deg,#2E5FA3 0%,#1F4A86 55%,#14284A 100%);border:0;color:#fff}
-.feat .kicker{color:#C9D9F2}
-.feat h3{margin:5px 0 6px;font-size:16.5px;color:#fff}
-.feat p{margin:0;font-size:13px;color:#E3ECF8}
-.feat .chip{background:rgba(255,255,255,.14);color:#fff}
-.feat .tagline{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border-radius:6px;padding:2px 8px}
-.loc{display:flex;align-items:center;gap:12px;padding:12px 16px}
-.loc .pin{width:32px;height:32px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}
-.loc b{display:block;font-size:14px}
+.btn .ico{width:15px;height:15px}
+.pcard{padding:0;overflow:hidden;text-align:center}
+.pcard .band{height:78px;background:linear-gradient(135deg,#2E5FA3 0%,#1F4A86 60%,#14284A 100%)}
+.avatar{width:112px;height:112px;border-radius:50%;margin:-58px auto 0;border:4px solid var(--card);background:linear-gradient(135deg,#EAF0F8,#C9D9F2);display:grid;place-items:center;font-size:36px;font-weight:700;color:#1F4A86;overflow:hidden;position:relative}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar .sil{width:70%;height:70%;fill:#2E5FA3;opacity:.55;margin-top:18%}
+.pcard .body{padding:12px 20px 18px}
+.pcard .kicker{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ok);font-weight:700}
+.pcard h3{margin:4px 0 2px;font-size:15.5px;line-height:1.35}
+.facts{display:grid;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);text-align:left;font-size:13px;color:var(--muted)}
+.facts div{display:flex;align-items:center;gap:9px}
+.facts .ico{width:16px;height:16px;color:var(--accent);flex:none}
 
 /* sections */
-section{padding:34px 0;border-top:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}
-h2{font-size:21px;margin:0;letter-spacing:-.2px;display:flex;align-items:center;gap:10px}
-h2::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--accent)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+h2{font-size:22px;margin:0;letter-spacing:-.2px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--accent)}
 .sec-head p{margin:0;color:var(--muted);font-size:13px}
 
-/* experience */
-.jobs{display:grid;gap:10px}
-.job .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-.job h3{margin:0;font-size:15.5px}
+/* services */
+.svc{display:flex;gap:13px;align-items:flex-start}
+.svc .ib{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}
+.svc h3{margin:1px 0 2px;font-size:14.5px}
+.svc p{margin:0;font-size:13px;color:var(--muted)}
+
+/* projects */
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:5px 13px;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+[data-theme="dark"] .tab.on{color:#0E1626}
+.tab span{opacity:.7;font-weight:500;margin-left:3px}
+.proj{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:16/7;position:relative;display:grid;place-items:center;overflow:hidden;color:var(--accent);
+  background:radial-gradient(circle at 20% 20%,rgba(46,95,163,.16),transparent 45%),radial-gradient(circle at 85% 80%,rgba(46,95,163,.12),transparent 40%),linear-gradient(135deg,#EAF0F8,#DCE7F5)}
+[data-theme="dark"] .thumb{background:linear-gradient(135deg,#1B2A43,#14223A)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb .ph{width:54px;height:54px;border-radius:15px;background:var(--card);display:grid;place-items:center;box-shadow:var(--shadow)}
+.thumb .ph .ico{width:26px;height:26px}
+.thumb .tag{position:absolute;top:10px;left:10px}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--card);color:var(--accent-2);border-radius:6px;padding:3px 7px;box-shadow:var(--shadow)}
+.proj .body{padding:13px 16px 15px;display:flex;flex-direction:column;flex:1}
+.proj h3{margin:0 0 3px;font-size:14.5px}
+.proj p{margin:0 0 10px;font-size:13px;color:var(--muted)}
+.proj .bw{margin-top:auto;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:5px}
+.proj .foot{margin-top:10px;display:flex;justify-content:flex-end}
+.proj .foot a{font-size:12.5px;font-weight:600;text-decoration:none;white-space:nowrap}
+.center{text-align:center;margin-top:16px}
+
+/* experience timeline */
+.tl{position:relative;display:grid;gap:12px}
+.job{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start}
+.logo{width:46px;height:46px;border-radius:12px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--accent-2);box-shadow:var(--shadow);overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:contain;padding:5px}
+.job .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.job h3{margin:0;font-size:15px}
 .job .org{color:var(--accent);font-size:13.5px;font-weight:600}
 .when{font-size:12px;color:var(--accent-2);background:var(--accent-soft);border-radius:999px;padding:2px 10px;white-space:nowrap;font-weight:600}
-.job .note{font-size:12.5px;color:var(--muted);margin:6px 0 0}
-.job ul{margin:8px 0 0;padding-left:17px;columns:1}
+.job .note{font-size:12.5px;color:var(--muted)}
+.job ul{margin:8px 0 0;padding-left:17px}
 .job li{margin:3px 0;font-size:13.5px}
 .job li::marker{color:var(--accent)}
-.job.lead ul{columns:2;column-gap:28px}
-.job.lead li{break-inside:avoid}
-
-/* build + projects */
-.svc .num{font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.svc h3,.proj h3{margin:4px 0 3px;font-size:14.5px}
-.svc p,.proj p{margin:0;font-size:13px;color:var(--muted)}
-.lift:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.group-label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:18px 0 8px;display:flex;align-items:center;gap:10px}
-.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
-.group-label:first-child{margin-top:0}
-.proj{display:flex;flex-direction:column}
-.proj .top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
-.tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent-2);border-radius:5px;padding:2px 6px;white-space:nowrap;align-self:flex-start;margin-bottom:2px}
-.proj .chips{margin-top:auto;padding-top:10px}
-.proj a.more{font-size:12.5px;font-weight:600;margin-top:8px;text-decoration:none}
-.meta{font-size:12px;color:var(--muted);margin-top:6px}
+.job li.more{display:none}
+.job.open li.more{display:list-item}
 
 /* videos */
-.vid{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.vid{padding:0;overflow:hidden}
 .vid .frame{position:relative;aspect-ratio:16/9;background:var(--navy)}
 .vid iframe,.vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#C9D9F2;font-size:13px;text-decoration:none}
-.vid .empty b{display:block;font-size:28px;line-height:1;margin-bottom:6px}
+.vid .empty{position:absolute;inset:0;display:grid;place-items:center;color:#C9D9F2;font-size:13px;text-decoration:none}
 .vid .body{padding:12px 16px 14px}
-.vid h3{margin:0 0 3px;font-size:14.5px}
+.vid h3{margin:0 0 2px;font-size:14.5px}
 .vid p{margin:0;font-size:13px;color:var(--muted)}
-.vid a.more{display:inline-block;font-size:12.5px;font-weight:600;margin-top:6px;text-decoration:none}
+.vid a{display:inline-block;font-size:12.5px;font-weight:600;margin-top:6px;text-decoration:none}
 
-/* skills */
-.skills{padding:4px 18px}
-.srow{display:grid;grid-template-columns:200px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);align-items:start}
-.srow:last-child{border-bottom:0}
-.srow h4{margin:3px 0 0;font-size:13px;color:var(--accent-2)}
-.srow .chips{margin-top:0}
-
-/* certifications */
-.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;margin:0;padding:0;list-style:none}
-.certs li{padding:8px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px}
-.certs .t{font-size:13.5px;font-weight:600}
-.edu-note{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
+/* tools + certs */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.card h4{margin:0 0 12px;font-size:14px;display:flex;align-items:center;gap:8px}
+.card h4 .ico{width:17px;height:17px;color:var(--accent)}
+.trow{display:grid;grid-template-columns:82px 1fr;gap:10px;padding:7px 0;align-items:start}
+.trow .lbl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:3px}
+.certs{list-style:none;margin:0;padding:0}
+.certs li{display:flex;gap:11px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
+.certs li.more{display:none}
+.certs.open li.more{display:flex}
+.certs .org{width:42px;height:32px;border-radius:8px;background:var(--accent-soft);color:var(--accent-2);display:grid;place-items:center;flex:none;font-size:10px;font-weight:800;letter-spacing:.02em;border:1px solid var(--line);overflow:hidden}
+.certs .org img{width:100%;height:100%;object-fit:contain;padding:3px;background:#fff}
+.certs .t{font-size:13.5px;font-weight:600;line-height:1.35}
+.edu{margin:10px 0 0;font-size:12px;color:var(--muted)}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:24px;align-items:start}
 .contact-grid .lead{margin:0 0 12px;color:var(--muted)}
-.clinks{display:grid;gap:6px;font-size:13.5px}
-.clinks a{text-decoration:none;font-weight:600}
+.clinks{display:grid;gap:8px;font-size:13.5px}
+.clinks a{text-decoration:none;font-weight:600;display:flex;align-items:center;gap:8px}
+.clinks .ico{width:16px;height:16px}
 form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 form label{font-size:12px;color:var(--muted);display:block;margin-bottom:3px}
 input,textarea{width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 11px}
@@ -145,22 +169,20 @@ form .full{grid-column:1/-1}
 footer{border-top:1px solid var(--line);padding:16px 0 28px;font-size:12.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-/* responsive */
 @media (max-width:900px){
-  .hero-grid,.contact-grid{grid-template-columns:1fr} .cols3{grid-template-columns:repeat(2,1fr)}
-  .job.lead ul{columns:1} .nav-links a{display:none}
+  .hero-grid,.contact-grid,.split{grid-template-columns:1fr} .cols3{grid-template-columns:repeat(2,1fr)}
+  .nav-links a{display:none} .pcard{max-width:420px}
 }
 @media (max-width:600px){
-  .cols2,.cols3,.certs{grid-template-columns:1fr} form{grid-template-columns:1fr}
-  .srow{grid-template-columns:1fr;gap:6px}
+  .cols2,.cols3{grid-template-columns:1fr} form{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr} .logo{display:none}
 }
-/* print / Save as PDF */
 @media print{
   :root{--bg:#fff;--card:#fff;--shadow:none}
-  header.nav,.actions,#contact,#videos,.icon-btn{display:none!important}
-  body{font-size:11.5px} .hero{padding:6px 0;background:none}
-  .feat{background:#fff;color:var(--ink);border:1px solid var(--line)} .feat *{color:var(--ink)!important}
-  section{padding:12px 0} .card{break-inside:avoid;box-shadow:none}
+  header.nav,.actions,#contact,#videos,.icon-btn,.tabs,.linkbtn,.thumb{display:none!important}
+  body{font-size:11.5px} .hero{padding:6px 0;background:none} section{padding:12px 0}
+  .card{break-inside:avoid;box-shadow:none} .proj{display:flex!important}
+  .job li.more,.certs li.more{display:list-item!important} .certs li.more{display:flex!important}
   a{color:inherit;text-decoration:none}
 }
 </style>
@@ -169,9 +191,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top"><span class="mono" id="mono"></span><span id="navName"></span></a>
   <nav class="nav-links">
-    <a href="#experience">Experience</a><a href="#build">What I build</a><a href="#projects">Projects</a>
-    <a href="#videos">Videos</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
-    <button class="icon-btn" id="themeBtn" title="Switch light/dark" aria-label="Switch light or dark theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <a href="#services">What I do</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+    <a href="#videos">Videos</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
+    <button class="icon-btn" id="themeBtn" title="Switch light/dark" aria-label="Switch light or dark theme"><svg class="ico" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </nav>
 </div></header>
 
@@ -181,41 +203,41 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
       <span class="badge" id="statusBadge"></span>
       <h1 id="heroName"></h1>
       <p class="headline" id="headline"></p>
+      <p class="tagline" id="tagline"></p>
       <p class="summary" id="summary"></p>
-      <p class="open-to" id="openTo"></p>
+      <div class="open" id="openTo"></div>
       <div class="actions" id="actions"></div>
     </div>
-    <div class="side" id="side"></div>
+    <div class="card pcard" id="pcard"></div>
   </div></div>
 
-  <section id="experience"><div class="wrap">
-    <div class="sec-head"><h2>Experience</h2></div>
-    <div class="jobs" id="jobs"></div>
-  </div></section>
-
-  <section id="build"><div class="wrap">
-    <div class="sec-head"><h2>What I build</h2><p>Working systems for health and development programmes.</p></div>
-    <div class="grid cols3" id="services"></div>
+  <section id="services"><div class="wrap">
+    <div class="sec-head"><h2>What I do</h2></div>
+    <div class="grid cols3" id="svcGrid"></div>
   </div></section>
 
   <section id="projects"><div class="wrap">
-    <div class="sec-head"><h2>Projects</h2><p>What I built myself, and what I delivered with vendors and partners.</p></div>
-    <div id="projectGroups"></div>
+    <div class="sec-head"><h2>Projects</h2><div class="tabs" id="tabs"></div></div>
+    <div class="grid cols3" id="projGrid"></div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="tl" id="jobs"></div>
   </div></section>
 
   <section id="videos"><div class="wrap">
-    <div class="sec-head"><h2>Videos</h2><p>Short introductions to Erada Digital Solutions and Erada Learning.</p></div>
+    <div class="sec-head"><h2>Videos</h2></div>
     <div class="grid cols2" id="videoGrid"></div>
   </div></section>
 
-  <section id="skills"><div class="wrap">
-    <div class="sec-head"><h2>Skills &amp; tools</h2></div>
-    <div class="card skills" id="skillList"></div>
-  </div></section>
-
-  <section id="certifications"><div class="wrap">
-    <div class="sec-head"><h2>Certifications</h2></div>
-    <div class="card"><ul class="certs" id="certList"></ul><p class="edu-note" id="eduNote"></p></div>
+  <section id="tools"><div class="wrap">
+    <div class="sec-head"><h2>Tools &amp; certifications</h2></div>
+    <div class="split">
+      <div class="card"><h4 id="toolsHead"></h4><div id="toolRows"></div></div>
+      <div class="card" id="certCard"><h4 id="certHead"></h4><ul class="certs" id="certList"></ul>
+        <div style="margin-top:8px" id="certMore"></div><p class="edu" id="eduNote"></p></div>
+    </div>
   </div></section>
 
   <section id="contact"><div class="wrap contact-grid">
@@ -246,12 +268,14 @@ const SHEET_API = "";
 const DEFAULT_DATA = {
  "profile": {
   "name": "Pravin Kumar Singh",
-  "headline": "Digital Health & Learning Technology Specialist · Programme systems and AI-enabled platforms",
-  "summary": "23 years in technology, including 12 supporting India's National AIDS Control Programme with I-TECH India. I build learning platforms, web portals, ODK field-data tools and automated reports, and I run vendor delivery, UAT and rollout for mobile and AI-enabled apps. I work with NACO, NIC, SACS, MoHFW and PEPFAR/HRSA partners to turn programme needs into systems that field teams use.",
-  "open_to": "Senior technical, consulting and programme-implementation roles in public health and development. Remote, hybrid or relocation across India.",
+  "headline": "Digital Health & Learning Technology Specialist",
+  "tagline": "23 years in technology · 12 on India's National AIDS Control Programme",
+  "summary": "I build and run the systems public-health programmes use every day: learning platforms, web portals, ODK field tools and automated reports. I also manage vendor delivery, UAT and rollout for mobile and AI-enabled apps with NACO, NIC, SACS and PEPFAR/HRSA partners.",
+  "open_to": "Senior technical roles, Consulting, Remote / Hybrid, Relocation across India",
   "status_badge": "Open to opportunities",
+  "photo": "",
   "location": "New Delhi, India",
-  "languages": "Hindi (native), English (professional), Marathi",
+  "languages": "Hindi, English, Marathi",
   "email": "pravin0103@hotmail.com",
   "website": "https://eradadigital.com",
   "website_label": "Erada Digital Solutions",
@@ -262,12 +286,9 @@ const DEFAULT_DATA = {
   "github_user": "",
   "current_role": "IT Manager – Digital Platforms & Programme Technology",
   "current_org": "I-TECH India (University of Washington)",
-  "current_since": "Since Jul 2014 · New Delhi · Consultant since Apr 2026",
-  "featured_title": "Distance Learning Platform",
-  "featured_text": "A PHP 8.3/MySQL platform for national distance-learning sessions: scheduling, personalised links, SMS/WhatsApp/email alerts, attendance, QR-verified certificates, 2FA and dashboards, with Google Gemini answering learner questions.",
-  "featured_note": "Demonstrated in public health for wider adoption",
-  "featured_tags": "PHP 8.3, MySQL, Gemini API, 2FA, QR certificates",
-  "footer_note": "Content managed in Google Sheets"
+  "current_since": "Since 2014 · Consultant since Apr 2026",
+  "footer_note": "Content managed in Google Sheets",
+  "built_with": "HTML, CSS & JavaScript · Google Sheets & Apps Script · GitHub Pages"
  },
  "stats": [],
  "experience": [
@@ -277,17 +298,19 @@ const DEFAULT_DATA = {
    "location": "New Delhi",
    "role": "IT Manager – Digital Platforms & Programme Technology",
    "org": "I-TECH India (University of Washington)",
-   "note": "Consultant since April 2026. Technology lead for I-TECH India's NACP work under PEPFAR/HRSA, across the head office and state offices.",
-   "bullets": "Designed and built a distance-learning platform on my own in PHP 8.3/MySQL to replace Zoom forms, Mailchimp and Excel for national sessions: scheduling, personalised links, SMS/WhatsApp/email alerts, attendance, QR-verified certificates, RBAC, 2FA and dashboards, with Google Gemini for learner Q&A. Demonstrated in public health for wider adoption.\nLed technical delivery of 500+ national and regional distance-learning sessions since 2014, covering slide set-up, presenter orientation, live support, recording and editing, attendance, certificates and sharing content with states and ART Centres.\nImplemented and manage Moodle for NACO's Strategic Information division and Canvas on AWS, including course setup, enrolments, assessments, certificates, completion tracking and learner support.\nDesigned and deployed ODK Central/XLSForm supervision tools across 130+ ART Centres (ART Performance, CSC, ART Plus/SACEP, SSS Readiness, ICTC and SSK), with action plans generated in Apps Script, emailed to officials and structured for Power BI; wrote user guides and supported field teams during rollout.\nBuilt an automated e-certificate system with Google Apps Script, Slides and Sheets that creates and emails personalised certificates to training participants, replacing manual certificate preparation.\nPiloted an AI agent on DigitalOcean's Gradient platform with two modules: an ART Centre finder with map-based directions, and a guidelines assistant that answers Medical Officers' questions on HIV treatment regimens.\nManaged the National HIV Treatment Guidelines app from ToR and vendor selection through security audit and Play Store rollout: an offline reference to a 556-page clinical guideline with 1,600+ organic downloads. Still manage its content updates.\nRan the full vendor lifecycle for the MAS digital modules (QR-based ICTC self-registration and a digital contact directory): scope, contract, UAT with the NACO IT Head, government acceptance and contract closure.\nCoordinated requirements, UAT and rollout for AI and communication tools: SAMVAAD counselling app (32,000+ sessions, handed over to state health authorities), SOCH conversational AI, ARTMitr IVRS (13,000 PLHIV reached, 87% ART collection rate) and Nirantar teleconsultation.\nKept servers, networks, email, storage, backups and endpoint security running across head office and state offices with 98%+ uptime; moved the organisation from Microsoft 365 to Google Workspace and set up a VPN file server for remote staff.\nLed I-TECH India's 2026 technical proposal for a Bengali primary-teacher learning platform in West Bengal: LMS architecture, offline delivery, content approach, UAT plan and demo course.\nAct as technology liaison among NACO, NIC, SACS, MoHFW, PEPFAR/HRSA partners and vendors; manage AMCs, SLAs, IT assets and procurement, and write the ToRs, IT policies, disaster-recovery plans, SOPs and user guides behind each rollout."
+   "logo": "UW",
+   "note": "Consultant since April 2026",
+   "bullets": "Technology lead for NACP digital work with NACO, NIC, SACS, MoHFW and PEPFAR/HRSA partners, from requirements to rollout.\nBuilt a distance-learning platform with Google Gemini AI integration and ran 500+ national and regional training sessions.\nDesigned ODK supervision tools used across 130+ ART Centres; now building one integrated ODK app for all supervision checklists.\nWorked on AI chatbots for the National Guidelines for HIV Care and Treatment, and an ART Centre finder.\nManaged vendor delivery and UAT for the HIV Treatment Guidelines app, SAMVAAD and paperless ART action plans.\nSet up and run Moodle and Canvas LMS for national training programmes.\nKept IT running across head office and state offices with 98%+ uptime; moved the organisation to Google Workspace.\nWrote ToRs, IT policies, SOPs, UAT documents and user guides; managed AMCs, SLAs and IT assets.\nLed I-TECH India's 2026 technical proposal for a Bengali primary-teacher learning platform in West Bengal."
   },
   {
    "start": "2026",
    "end": "Present",
    "location": "New Delhi",
-   "role": "Founder · Independent Digital Learning & Technology Consultant",
+   "role": "Founder",
    "org": "Erada Digital Solutions",
+   "logo": "EDS",
    "note": "",
-   "bullets": "Set up Erada Digital Solutions to offer Moodle and WordPress platforms, ODK/KoBo systems, web applications and programme technology to NGOs and public-health organisations.\nScoped and priced a Moodle LMS for a Delhi-area NGO: 50 users, a 10-week bilingual Hindi/English course, Zoom integration, automated certificates and offline mobile access.\nLaunched Erada Learning, a free e-learning platform with foundational courses in public health, digital health and programme management."
+   "bullets": "Started Erada Digital Solutions to deliver LMS, web, ODK and automation work for NGOs and public-health programmes.\nLaunched Erada Learning, a free platform with foundational public-health courses.\nScoped a bilingual Moodle LMS for a Delhi-area NGO."
   },
   {
    "start": "Nov 2012",
@@ -295,8 +318,9 @@ const DEFAULT_DATA = {
    "location": "New Delhi",
    "role": "IT Manager – Infrastructure & Systems",
    "org": "FHI 360 (deputed via VVM Solutions)",
+   "logo": "FHI",
    "note": "",
-   "bullets": "Managed IT infrastructure across multiple FHI 360 locations: Windows Server 2008 R2 on HP ProLiant with RAID 5, Active Directory, networks, storage, email and endpoint security.\nAdministered the Cisco ASA 5500 firewall and set up scan-to-folder and scan-to-email workflows on Canon imageRUNNER devices.\nProvided remote and on-site IT support to users at the NACO office, resolving network, application and hardware issues.\nKept systems stable and audit-ready with IT SOPs, asset records, backups and business-continuity documentation.\nCoordinated vendors for infrastructure support, maintenance, upgrades and procurement."
+   "bullets": "Managed servers, Active Directory, networks, email and security across multiple FHI 360 offices.\nRan the Cisco ASA 5500 firewall and supported users at the NACO office.\nKept systems audit-ready with SOPs, asset records and backups."
   },
   {
    "start": "Oct 2011",
@@ -304,8 +328,9 @@ const DEFAULT_DATA = {
    "location": "New Delhi",
    "role": "IT Manager – EMR & Clinic Systems",
    "org": "Pathfinder Health India",
+   "logo": "PF",
    "note": "",
-   "bullets": "Deployed the Easy Clinic EMR across clinics: wrote test cases, tested desktop and web versions, reported bugs, configured the system, managed SQL backups and trained doctors and clinical staff.\nTested patient-information integration with NFC-enabled smartphones, including BlackBerry, for point-of-care data capture.\nManaged IT for 60+ users across multiple clinics (Windows Server 2008 R2, Wi-Fi, networks and remote support) with 98% internet uptime.\nSet up a SQUID proxy server on Ubuntu Linux for internet access control and network security.\nWrote IT policies, SOPs and process documents, and coordinated vendors on procurement and issue resolution."
+   "bullets": "Rolled out the Easy Clinic EMR: testing, configuration, SQL backups and training for doctors.\nManaged IT for 60+ users across clinics with 98% internet uptime.\nTested NFC smartphone integration for point-of-care patient data."
   },
   {
    "start": "Mar 2003",
@@ -313,244 +338,263 @@ const DEFAULT_DATA = {
    "location": "Pune",
    "role": "Production Support Manager / Account Manager",
    "org": "E-Dictate IT Solutions",
+   "logo": "ED",
    "note": "",
-   "bullets": "Managed production support for healthcare documentation and EMR/EHR workflows across several US client accounts, delivering 40,000+ lines a day within quality and turnaround targets.\nLed a team of 21 across two departments: shift planning, workflow, quality checks, recruitment, training and rollout of new processes.\nRan regular web meetings with US clients on process changes, new software and workflow improvements, and handled daily client communication on production issues.\nAdministered Windows Server 2003, the office network and Wi-Fi, and gave first- and second-level remote support to home-based staff.\nWrote process documents, client onboarding material and training content for new applications and workflows."
+   "bullets": "Managed EMR/EHR documentation for US clients, delivering 40,000+ lines a day within quality and turnaround targets.\nLed a team of 21 across two departments: shifts, quality, hiring and training.\nRan client meetings and supported remote staff on servers, network and applications."
   }
  ],
  "services": [
   {
-   "num": "01",
-   "kicker": "Learning platforms",
-   "title": "LMS and distance learning",
-   "text": "Moodle and Canvas setup and administration, live session delivery, certificates and completion tracking.",
-   "tags": "Moodle, Canvas, Adobe Connect, Zoom"
+   "icon": "learning",
+   "title": "Learning platforms",
+   "text": "Moodle and Canvas setup, live sessions and certificates."
   },
   {
-   "num": "02",
-   "kicker": "Field data",
-   "title": "Supervision tools that work offline",
-   "text": "ODK and KoboToolbox forms with scoring, skip logic and cascading State → District → facility lists.",
-   "tags": "ODK Central, KoboToolbox, XLSForm"
+   "icon": "data",
+   "title": "Field data tools",
+   "text": "Offline ODK and KoboToolbox forms with scoring and logic."
   },
   {
-   "num": "03",
-   "kicker": "Web applications",
-   "title": "Portals for programme teams",
-   "text": "PHP/MySQL apps with logins, roles, 2FA, notifications, certificates and dashboards.",
-   "tags": "PHP 8.3, MySQL, WordPress, REST APIs"
+   "icon": "web",
+   "title": "Web applications",
+   "text": "PHP/MySQL portals with logins, alerts and dashboards."
   },
   {
-   "num": "04",
-   "kicker": "Automation & dashboards",
-   "title": "Reports that write themselves",
-   "text": "Apps Script and Excel VBA pipelines that turn submissions into PDF action plans, emails and Power BI data.",
-   "tags": "Apps Script, Excel VBA, Power BI"
+   "icon": "automation",
+   "title": "Automation & dashboards",
+   "text": "Apps Script, VBA and Power BI that turn data into reports."
   },
   {
-   "num": "05",
-   "kicker": "AI & communications",
-   "title": "AI-enabled tools, tested properly",
-   "text": "Gemini API integration, chatbot requirements and UAT, SMS/WhatsApp messaging and IVRS platforms.",
-   "tags": "Gemini API, Chatbots, MSG91, IVRS"
+   "icon": "ai",
+   "title": "AI-enabled tools",
+   "text": "Gemini integration, guideline chatbots and AI app testing."
   },
   {
-   "num": "06",
-   "kicker": "Infrastructure & security",
-   "title": "Servers, cloud and audits",
-   "text": "Cloud hosting, firewalls, Microsoft 365 and Google Workspace admin, and Nessus/VA security audits.",
-   "tags": "AWS, Azure, DigitalOcean, NIC NGC"
+   "icon": "infra",
+   "title": "Infrastructure & security",
+   "text": "Cloud hosting, networks, Workspace admin and security audits."
   }
  ],
  "projects": [
   {
    "group": "Built by me",
    "name": "Distance Learning Platform",
-   "badge": "Demonstrated for adoption",
-   "description": "Full-stack platform for national distance-learning operations: scheduling, personalised links, SMS/WhatsApp/email alerts, attendance, QR-verified certificates, RBAC, 2FA and Gemini-powered learner Q&A.",
-   "tags": "PHP 8.3, MySQL, Gemini API",
-   "link": ""
+   "badge": "AI-integrated",
+   "description": "Google Gemini answers learner questions inside a platform for scheduling, alerts, attendance and QR certificates. Demonstrated in public health for wider adoption.",
+   "tags": "PHP 8.3, MySQL, Google Gemini API, SMS & WhatsApp APIs, Zoom OAuth, 2FA",
+   "link": "",
+   "icon": "ai",
+   "image": "",
+   "featured": "yes"
   },
   {
    "group": "Built by me",
-   "name": "Paperless ART Action Plans",
-   "badge": "",
-   "description": "ODK Central → Google Sheets → Apps Script → PDF action plans, emailed to officials after each ART Centre assessment.",
-   "tags": "ODK Central, Apps Script, PDF",
-   "link": ""
+   "name": "Integrated ODK Supervision App",
+   "badge": "In progress",
+   "description": "All supportive supervision checklists in one ODK form; the visiting team picks the right checklist for each visit.",
+   "tags": "ODK Central, XLSForm, DigitalOcean",
+   "link": "",
+   "icon": "data",
+   "image": "",
+   "featured": "yes"
   },
   {
    "group": "Built by me",
    "name": "ODK Supervision Suite",
    "badge": "130+ ART Centres",
-   "description": "XLSForm tools for ART Performance, CSC, ART Plus/SACEP, SSS Readiness, ICTC and SSK, with scoring and Power BI-ready outputs.",
-   "tags": "ODK Central, XLSForm, Power BI",
-   "link": ""
+   "description": "Scored supervision checklists for ART, CSC, ART Plus/SACEP, SSS, ICTC and SSK.",
+   "tags": "ODK Central, KoboToolbox, XLSForm, Power BI",
+   "link": "",
+   "icon": "data",
+   "image": "",
+   "featured": "yes"
+  },
+  {
+   "group": "Built by me",
+   "name": "HIV Guidelines AI Chatbots",
+   "badge": "AI",
+   "description": "Chatbots that answer Medical Officers' questions from the National Guidelines for HIV Care and Treatment, plus an ART Centre finder with map directions.",
+   "tags": "DigitalOcean Gradient, Azure, RAG",
+   "link": "",
+   "icon": "ai",
+   "image": "",
+   "featured": "yes"
   },
   {
    "group": "Built by me",
    "name": "Equipment Mapping Form",
    "badge": "839 ART Centres",
-   "description": "KoboToolbox form with cascading State → District → ART Centre selection across all ART Centres nationally.",
+   "description": "Cascading State → District → ART Centre form for national equipment mapping.",
    "tags": "KoboToolbox, XLSForm",
-   "link": ""
+   "link": "",
+   "icon": "map",
+   "image": "",
+   "featured": ""
   },
   {
    "group": "Built by me",
    "name": "Strategic Information e-Learning",
    "badge": "",
-   "description": "Moodle course for State and District SI Officers under NACP, on a server I set up and maintain.",
-   "tags": "Moodle, SCORM",
-   "link": ""
+   "description": "Moodle course for State and District SI Officers under NACP.",
+   "tags": "Moodle, Articulate Rise, SCORM, DigitalOcean",
+   "link": "",
+   "icon": "learning",
+   "image": "",
+   "featured": ""
   },
   {
    "group": "Built by me",
-   "name": "Automated e-Certificate System",
+   "name": "Automated e-Certificates",
    "badge": "",
-   "description": "Google Apps Script, Slides and Sheets workflow that fills in participant names, course and date, and emails personalised certificates at scale.",
-   "tags": "Apps Script, Google Slides, Sheets",
-   "link": ""
+   "description": "Personalised certificates created and emailed from Google Sheets and Slides.",
+   "tags": "Google Apps Script, Google Sheets, Google Slides, Gmail",
+   "link": "",
+   "icon": "certificate",
+   "image": "",
+   "featured": ""
   },
   {
    "group": "Built by me",
-   "name": "AI Agent Pilot: ART Centre Finder & Guidelines Assistant",
-   "badge": "Pilot",
-   "description": "Low-code AI agent on DigitalOcean Gradient: finds ART Centres with map directions and answers Medical Officers' questions from the national HIV guidelines.",
-   "tags": "DigitalOcean Gradient, AI agent",
-   "link": ""
-  },
-  {
-   "group": "Built by me",
-   "name": "Training Data Processing Tool",
+   "name": "Training Data Tool",
    "badge": "",
-   "description": "Excel VBA tool with step-by-step buttons that compiles and cleans national and regional session data.",
-   "tags": "Excel VBA",
-   "link": ""
+   "description": "Excel VBA tool that compiles and cleans national training session data.",
+   "tags": "Excel, VBA",
+   "link": "",
+   "icon": "chart",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Coordinated with vendors & partners",
-   "name": "National HIV Treatment Guidelines App",
+   "group": "With partners",
+   "name": "HIV Treatment Guidelines App",
    "badge": "1,600+ downloads",
-   "description": "Offline Android reference app built from a 556-page clinical guideline. ToR, vendor selection, security audit, Play Store rollout and updates.",
-   "tags": "Android, Security audit",
-   "link": "https://treatandcareguide.naco.gov.in"
+   "description": "Offline Android reference to a 556-page clinical guideline, from ToR to Play Store.",
+   "tags": "Android, Google Play, Security audit (VAPT)",
+   "link": "https://treatandcareguide.naco.gov.in",
+   "icon": "mobile",
+   "image": "",
+   "featured": "yes"
   },
   {
-   "group": "Coordinated with vendors & partners",
+   "group": "With partners",
    "name": "SAMVAAD AI Counselling App",
    "badge": "32,000+ sessions",
-   "description": "AI-enabled tablet app with 8 counselling modules across 13 HIV themes. Requirements, UAT and handover to state health authorities.",
-   "tags": "AI, Tablet app, UAT",
-   "link": ""
+   "description": "Tablet counselling app with 8 modules on 13 HIV themes, handed over to states.",
+   "tags": "Android tablet, AI",
+   "link": "",
+   "icon": "ai",
+   "image": "",
+   "featured": "yes"
   },
   {
-   "group": "Coordinated with vendors & partners",
+   "group": "With partners",
+   "name": "Paperless ART Action Plans",
+   "badge": "",
+   "description": "Worked closely with the vendor to streamline ODK submissions into PDF action plans emailed to officials.",
+   "tags": "ODK Central, Google Sheets, Apps Script, Google Docs",
+   "link": "",
+   "icon": "automation",
+   "image": "",
+   "featured": ""
+  },
+  {
+   "group": "With partners",
    "name": "SOCH Conversational AI",
    "badge": "",
-   "description": "Chatbot that lets programme managers query national programme data in plain language, with role-based outputs.",
+   "description": "Chatbot for programme managers to query national data in plain language.",
    "tags": "Conversational AI, RBAC",
-   "link": ""
+   "link": "",
+   "icon": "ai",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Coordinated with vendors & partners",
+   "group": "With partners",
    "name": "ARTMitr IVRS",
    "badge": "13,000 PLHIV reached",
-   "description": "IVRS and SMS platform during COVID-19 that supported an 87% ART collection rate.",
+   "description": "IVRS and SMS reminders during COVID-19, with an 87% ART collection rate.",
    "tags": "IVRS, SMS",
-   "link": ""
+   "link": "",
+   "icon": "phone",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Coordinated with vendors & partners",
+   "group": "With partners",
    "name": "Nirantar Teleconsultation",
    "badge": "",
-   "description": "Cloud platform for virtual consultations, clinical messaging and e-prescriptions for HIV programme clinicians.",
-   "tags": "Teleconsultation, Cloud",
-   "link": ""
+   "description": "Virtual consultations, messaging and e-prescriptions for HIV clinicians.",
+   "tags": "Cloud platform, e-Prescription",
+   "link": "",
+   "icon": "health",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Coordinated with vendors & partners",
+   "group": "With partners",
    "name": "MAS Digital Modules",
    "badge": "Rolled out",
-   "description": "QR-based ICTC self-registration and a digital contact directory, taken from scope to government acceptance and closure.",
-   "tags": "QR, Web app, UAT",
-   "link": ""
+   "description": "QR-based ICTC self-registration and a digital contact directory.",
+   "tags": "QR codes, Web app",
+   "link": "",
+   "icon": "web",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Coordinated with vendors & partners",
+   "group": "With partners",
    "name": "ART Adherence Tool",
    "badge": "",
-   "description": "Android app for ART adherence. Enhancements, testing, Play Store policy compliance and live release management.",
+   "description": "Android app enhancements, testing and Play Store releases.",
    "tags": "Android, Google Play",
-   "link": ""
+   "link": "",
+   "icon": "mobile",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Own initiatives",
+   "group": "Erada",
    "name": "Erada Digital Solutions",
    "badge": "Founded 2026",
-   "description": "Digital solutions for NGOs and public-health programmes: web applications, WordPress websites, Moodle LMS, ODK/KoBo data tools, dashboards and automation.",
-   "tags": "Web apps, Moodle, ODK, WordPress",
-   "link": "https://eradadigital.com"
+   "description": "Web apps, websites, Moodle LMS, ODK tools and dashboards for NGOs and programmes.",
+   "tags": "WordPress, Moodle, ODK, PHP",
+   "link": "https://eradadigital.com",
+   "icon": "web",
+   "image": "",
+   "featured": ""
   },
   {
-   "group": "Own initiatives",
+   "group": "Erada",
    "name": "Erada Learning",
-   "badge": "Free · In development",
-   "description": "Open e-learning platform with foundational courses in public health, digital health and programme management.",
+   "badge": "Free",
+   "description": "Free courses in public health, digital health and programme management.",
    "tags": "Moodle, Articulate",
-   "link": "http://learn.eradadigital.com/"
+   "link": "http://learn.eradadigital.com/",
+   "icon": "learning",
+   "image": "",
+   "featured": ""
   }
  ],
  "skills": [
   {
-   "group": "LMS & learning",
-   "items": "Moodle administration, Canvas, Adobe Connect, Course setup, Enrolments, Assessments, Certificates, Completion tracking"
+   "group": "Learning",
+   "items": "Moodle, Canvas, Zoom"
   },
   {
-   "group": "Field data",
-   "items": "ODK Central, KoboToolbox, XLSForm, Skip logic, Offline collection, Google Sheets & Apps Script"
+   "group": "Data",
+   "items": "ODK Central, KoboToolbox, Power BI, Tableau, Excel VBA"
   },
   {
-   "group": "AI & digital tools",
-   "items": "Gemini AI API, DigitalOcean Gradient, Conversational AI / chatbots, SMS & WhatsApp APIs, Zoom OAuth, AI-enabled app testing"
+   "group": "Build",
+   "items": "PHP, MySQL, JavaScript, WordPress, Apps Script"
   },
   {
-   "group": "Development",
-   "items": "PHP 8.3, MySQL, SQL, Python, JavaScript, WordPress, REST / API integration"
+   "group": "AI",
+   "items": "Gemini API, DigitalOcean Gradient, RAG chatbots"
   },
   {
-   "group": "Analytics",
-   "items": "Power BI, Tableau, Excel & VBA, ODK / KoBo export pipelines"
-  },
-  {
-   "group": "Cloud & hosting",
-   "items": "AWS, Azure, DigitalOcean, NIC NGC Cloud, Apache, Ubuntu, CentOS"
-  },
-  {
-   "group": "Testing & security",
-   "items": "UAT & test cases, Issue tracking, Nessus / VA audits, 2FA, RBAC, bcrypt hashing, Backups & disaster recovery"
-  },
-  {
-   "group": "Mobile & communications",
-   "items": "Android, Google Play Store, Teleconsultation, IVRS, MSG91, Tata Tele Smartflo, Mailchimp"
-  },
-  {
-   "group": "Infrastructure",
-   "items": "Windows Server 2003 / 2008 / 2012, Linux, Active Directory, Cisco ASA 5500, Dell SonicWALL, SQUID proxy, RAID 5, VPN, Trend Micro"
-  },
-  {
-   "group": "Collaboration",
-   "items": "Microsoft 365, SharePoint, Teams, Google Workspace admin & migration, Zoom"
-  },
-  {
-   "group": "Design & media",
-   "items": "Canva, Filmora, Movavi"
-  },
-  {
-   "group": "Health IT & programmes",
-   "items": "NACP / NACO, SOCH, ART Centres, ICTC, SACS, PEPFAR / HRSA, Easy Clinic EMR, MEDENT, AdvancedMD, Centricity"
-  },
-  {
-   "group": "Programme delivery",
-   "items": "ToR & SOW writing, Vendor management, AMCs & SLAs, IT asset management, Implementation planning, Risk logs, Rollout, Training, SOPs & user guides"
+   "group": "Cloud & IT",
+   "items": "AWS, Azure, DigitalOcean, NIC NGC Cloud, Google Workspace, Microsoft 365, Cisco ASA, SonicWALL"
   }
  ],
  "education": [
@@ -562,87 +606,101 @@ const DEFAULT_DATA = {
  ],
  "certifications": [
   {
-   "title": "Strategic Applications of IT Project & Program Management",
+   "title": "IT Project & Program Management",
    "issuer": "University of Washington",
-   "date": ""
+   "date": "",
+   "logo": "UW"
   },
   {
    "title": "Global Health Project Management",
    "issuer": "University of Washington",
-   "date": ""
+   "date": "",
+   "logo": "UW"
   },
   {
    "title": "Leadership & Management in Health",
    "issuer": "University of Washington",
-   "date": ""
-  },
-  {
-   "title": "Monitoring & Evaluation in Global Health",
-   "issuer": "University of Washington",
-   "date": ""
-  },
-  {
-   "title": "Transforming Your Leadership & Management Skills",
-   "issuer": "University of Washington",
-   "date": ""
+   "date": "",
+   "logo": "UW"
   },
   {
    "title": "Introduction to Agentic AI",
    "issuer": "NIELIT",
-   "date": ""
+   "date": "",
+   "logo": "NIELIT"
   },
   {
-   "title": "Bootcamp on Machine Learning for Cyber Security",
+   "title": "Machine Learning for Cyber Security",
    "issuer": "CDAC",
-   "date": ""
+   "date": "",
+   "logo": "CDAC"
   },
   {
-   "title": "Geodata Processing using Python and Machine Learning",
+   "title": "Geodata Processing with Python & ML",
    "issuer": "ISRO",
-   "date": ""
+   "date": "",
+   "logo": "ISRO"
+  },
+  {
+   "title": "Monitoring & Evaluation in Global Health",
+   "issuer": "University of Washington",
+   "date": "",
+   "logo": "UW"
+  },
+  {
+   "title": "Transforming Your Leadership & Management Skills",
+   "issuer": "University of Washington",
+   "date": "",
+   "logo": "UW"
   },
   {
    "title": "KoboToolbox for Beginners",
    "issuer": "Data for Development",
-   "date": ""
+   "date": "",
+   "logo": "D4D"
   },
   {
    "title": "Data Visualisation",
    "issuer": "Coursera / Global Health eLearning",
-   "date": ""
+   "date": "",
+   "logo": "C"
   },
   {
    "title": "LMS Foundations",
    "issuer": "LinkedIn Learning",
-   "date": ""
+   "date": "",
+   "logo": "in"
   },
   {
    "title": "AWS for Beginners",
    "issuer": "Great Learning",
-   "date": ""
+   "date": "",
+   "logo": "GL"
   },
   {
    "title": "Certificate in Software Engineering",
    "issuer": "Aptech Computers",
-   "date": ""
+   "date": "",
+   "logo": "AP"
   },
   {
    "title": "Certificate in Data Processing",
    "issuer": "Lakhotia Computers",
-   "date": ""
+   "date": "",
+   "logo": "LC"
   }
  ],
  "videos": [
   {
    "title": "Erada Digital Solutions",
-   "description": "A short introduction to Erada Digital Solutions: web applications, websites, Moodle learning platforms, ODK field-data tools, dashboards and automation for NGOs and public-health programmes.",
+   "description": "Web apps, websites, Moodle, ODK tools and dashboards for NGOs and programmes.",
    "url": "https://youtu.be/QWV5-Vd4gak",
    "link": "https://eradadigital.com",
    "link_label": "Visit Erada Digital Solutions"
   },
   {
    "title": "Erada Digital Learning – how the Moodle LMS works",
-   "description": "How Erada Learning works: a free Moodle platform with foundational courses in public health, digital health and programme management.",
+   "description": "How the free Erada Learning Moodle platform works.",
    "url": "https://youtu.be/qBaylqFazK0",
    "link": "http://learn.eradadigital.com/",
    "link_label": "Visit Erada Learning"
@@ -650,101 +708,149 @@ const DEFAULT_DATA = {
  ]
 };
 
+/* Simple line icons */
+const ICONS = {
+  learning: '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>',
+  data: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9z"/><path d="m9 14 2 2 4-4"/>',
+  web: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 6.5h.01M10 6.5h.01"/>',
+  automation: '<path d="M4 12a8 8 0 0 1 14-5.3L20 8"/><path d="M20 4v4h-4"/><path d="M20 12a8 8 0 0 1-14 5.3L4 16"/><path d="M4 20v-4h4"/>',
+  ai: '<path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>',
+  infra: '<rect x="4" y="4" width="16" height="7" rx="1.5"/><rect x="4" y="13" width="16" height="7" rx="1.5"/><path d="M8 7.5h.01M8 16.5h.01"/>',
+  mobile: '<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',
+  phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+  health: '<path d="M3 12h4l2-4 3 8 2-4h7"/>',
+  certificate: '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 8h10M7 11h5"/><circle cx="16" cy="15" r="2.5"/><path d="M14.8 17.2 14.5 21l1.5-.8 1.5.8-.3-3.8"/>',
+  map: '<path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  chart: '<path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  cap: '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>',
+  down: '<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>',
+  brief: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>',
+  lang: '<path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"/><path d="m13 21 4-9 4 9M14.5 18h5"/>',
+  tool: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/>',
+  award: '<circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/>',
+  check: '<path d="m5 12 5 5 9-10"/>'
+};
+const icon = n => `<svg class="ico" viewBox="0 0 24 24">${ICONS[n] || ICONS.web}</svg>`;
+
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const list = s => String(s || "").split(",").map(x => x.trim()).filter(Boolean);
-const chips = s => list(s).length ? `<div class="chips">${list(s).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>` : "";
+const chips = s => `<div class="chips">${list(s).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>`;
+const isImg = s => /\.(png|jpe?g|webp|gif|svg)(\?|$)/i.test(String(s || "")) || /^https?:\/\//.test(String(s || ""));
+const initials = s => String(s || "").replace(/\(.*?\)/g, "").split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join("").toUpperCase();
 const ext = (url, label, cls = "btn") => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${label}</a>`;
 
+let DATA = null, TAB = "Highlights", SHOW_ALL = false;
+
 function render(D){
+  DATA = D;
   const P = D.profile;
   const parts = String(P.name || "").trim().split(" ");
   const last = parts.length > 1 ? parts.pop() : "";
-  document.title = `${P.name} · ${(P.headline || "").split("·")[0].trim()}`;
+  document.title = `${P.name} · ${P.headline || ""}`;
   $("navName").textContent = P.name;
-  $("mono").textContent = String(P.name || "").split(" ").filter(Boolean).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+  $("mono").textContent = initials(P.name);
   $("heroName").innerHTML = `${esc(parts.join(" "))} <span>${esc(last)}</span>`;
   $("statusBadge").textContent = P.status_badge || "";
   $("statusBadge").style.display = P.status_badge ? "" : "none";
   $("headline").textContent = P.headline || "";
+  $("tagline").textContent = P.tagline || "";
   $("summary").textContent = P.summary || "";
-  $("openTo").textContent = P.open_to ? "Open to: " + P.open_to : "";
-  $("openTo").style.display = P.open_to ? "" : "none";
+  $("openTo").innerHTML = P.open_to ? `<b>Open to</b>${list(P.open_to).map(t => `<span class="chip">${esc(t)}</span>`).join("")}` : "";
 
   let a = "";
-  if (P.email) a += `<a class="btn primary" href="mailto:${esc(P.email)}">✉ Email me</a>`;
-  if (P.website) a += ext(P.website, `🌐 ${esc(P.website_label || "Website")}`);
-  if (P.learning_portal) a += ext(P.learning_portal, `🎓 ${esc(P.learning_portal_label || "Learning portal")}`);
-  if (P.phone) a += `<a class="btn" href="tel:${esc(P.phone.replace(/\s/g, ""))}">☎ ${esc(P.phone)}</a>`;
+  if (P.email) a += `<a class="btn primary" href="mailto:${esc(P.email)}">${icon("mail")} Email me</a>`;
+  if (P.website) a += ext(P.website, `${icon("globe")} ${esc(P.website_label || "Website")}`);
+  if (P.learning_portal) a += ext(P.learning_portal, `${icon("cap")} ${esc(P.learning_portal_label || "Learning portal")}`);
   if (P.linkedin) a += ext(P.linkedin, "LinkedIn");
   if (P.github_user) a += ext(`https://github.com/${P.github_user}`, "GitHub");
-  a += `<button class="btn" onclick="window.print()">⤓ Save as PDF</button>`;
+  a += `<button class="btn" onclick="window.print()">${icon("down")} Save as PDF</button>`;
   $("actions").innerHTML = a;
 
-  let s = `<div class="card now"><div class="kicker live">Currently</div><h3>${esc(P.current_role)}</h3>
-    <div class="small">${esc(P.current_org)}</div><div class="small">${esc(P.current_since)}</div></div>`;
-  if (P.featured_title) s += `<div class="card feat"><div class="kicker">Featured · built by me</div><h3>${esc(P.featured_title)}</h3>
-    <p>${esc(P.featured_text)}</p>${chips(P.featured_tags)}${P.featured_note ? `<span class="tagline">${esc(P.featured_note)}</span>` : ""}</div>`;
-  s += `<div class="card loc"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
-    <div><b>${esc(P.location)}</b>${P.languages ? `<span class="small">Speaks ${esc(P.languages)}</span>` : ""}</div></div>`;
-  (D.stats || []).forEach(x => s += `<div class="card"><b style="font-size:22px;color:var(--accent)">${esc(x.value)}</b><div class="small">${esc(x.label)}</div></div>`);
-  $("side").innerHTML = s;
+  const avatar = P.photo ? `<img src="${esc(P.photo)}" alt="${esc(P.name)}">` : `<svg viewBox="0 0 24 24" class="sil"><circle cx="12" cy="9" r="4.2"/><path d="M3.8 21.5c.9-4.4 4.2-6.8 8.2-6.8s7.3 2.4 8.2 6.8"/></svg>`;
+  $("pcard").innerHTML = `<div class="band"></div><div class="avatar">${avatar}</div><div class="body">
+    <div class="kicker">● Currently</div><h3>${esc(P.current_role)}</h3>
+    <div class="small">${esc(P.current_org)}</div><div class="small">${esc(P.current_since)}</div>
+    <div class="facts">
+      ${P.location ? `<div>${icon("map")}${esc(P.location)}</div>` : ""}
+      ${P.languages ? `<div>${icon("lang")}${esc(P.languages)}</div>` : ""}
+      ${P.phone ? `<div>${icon("phone")}<a href="tel:${esc(P.phone.replace(/\s/g, ""))}">${esc(P.phone)}</a></div>` : ""}
+    </div></div>`;
+
+  $("svcGrid").innerHTML = (D.services || []).map(s => `<div class="card svc lift">
+    <div class="ib">${icon(s.icon)}</div><div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div></div>`).join("");
+
+  renderProjects();
 
   $("jobs").innerHTML = (D.experience || []).map((j, i) => {
-    const bullets = String(j.bullets || "").split("\n").map(x => x.trim()).filter(Boolean);
+    const b = String(j.bullets || "").split("\n").map(x => x.trim()).filter(Boolean);
     const when = [j.start, j.end].filter(Boolean).join(" – ") + (j.location ? ` · ${j.location}` : "");
-    return `<div class="card job${bullets.length > 5 ? " lead" : ""}"><div class="top"><div>
-      <h3>${esc(j.role || j.org)}</h3>${j.role ? `<div class="org">${esc(j.org)}</div>` : ""}</div>
+    const logo = j.logo && isImg(j.logo) ? `<img src="${esc(j.logo)}" alt="">` : esc(j.logo || initials(j.org));
+    return `<div class="job" id="job${i}"><div class="logo">${logo}</div><div class="card">
+      <div class="top"><div><h3>${esc(j.role || j.org)}</h3>${j.role ? `<div class="org">${esc(j.org)}${j.note ? ` <span class="note">· ${esc(j.note)}</span>` : ""}</div>` : ""}</div>
       <span class="when">${esc(when)}</span></div>
-      ${j.note ? `<p class="note">${esc(j.note)}</p>` : ""}
-      ${bullets.length ? `<ul>${bullets.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</div>`;
+      ${b.length ? `<ul>${b.map((x, k) => `<li${k >= 5 ? ' class="more"' : ""}>${esc(x)}</li>`).join("")}</ul>` : ""}
+      ${b.length > 5 ? `<button class="linkbtn" style="margin-top:6px" onclick="toggleJob(${i},this)">Show ${b.length - 5} more</button>` : ""}</div></div>`;
   }).join("");
-
-  $("services").innerHTML = (D.services || []).map(x => `<div class="card svc lift">
-    <div class="num">${esc(x.num)} · ${esc(x.kicker)}</div><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p>${chips(x.tags)}</div>`).join("");
-
-  const groups = {};
-  (D.projects || []).forEach(p => (groups[p.group] = groups[p.group] || []).push(p));
-  $("projectGroups").innerHTML = Object.entries(groups).map(([g, ps]) => `<div class="group-label">${esc(g)}</div>
-    <div class="grid cols3">${ps.map(p => `<div class="card proj lift" data-name="${esc(p.name)}">
-      ${p.badge ? `<span class="tag">${esc(p.badge)}</span>` : ""}<h3>${esc(p.name)}</h3>
-      <p>${esc(p.description)}</p>${chips(p.tags)}
-      ${p.link ? `<a class="more" href="${esc(p.link)}" target="_blank" rel="noopener">Visit →</a>` : ""}</div>`).join("")}</div>`).join("");
 
   const vids = D.videos || [];
   $("videos").style.display = vids.length ? "" : "none";
   $("videoGrid").style.gridTemplateColumns = vids.length === 1 ? "minmax(0,720px)" : "";
   $("videoGrid").innerHTML = vids.map(v => {
     const e = embed(v.url);
-    const frame = !v.url ? `<div class="empty"><div><b>▶</b>Video link to be added</div></div>`
+    const frame = !v.url ? `<div class="empty">▶ Video link to be added</div>`
       : e.type === "video" ? `<video controls preload="metadata" src="${esc(e.src)}"></video>`
       : e.type === "iframe" ? `<iframe src="${esc(e.src)}" title="${esc(v.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`
-      : `<a class="empty" href="${esc(v.url)}" target="_blank" rel="noopener"><div><b>▶</b>Watch the video</div></a>`;
-    return `<div class="card vid"><div class="frame">${frame}</div><div class="body">
-      <h3>${esc(v.title)}</h3><p>${esc(v.description)}</p>
-      ${v.link ? `<a class="more" href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.link_label || "Visit")} →</a>` : ""}</div></div>`;
+      : `<a class="empty" href="${esc(v.url)}" target="_blank" rel="noopener">▶ Watch the video</a>`;
+    return `<div class="card vid"><div class="frame">${frame}</div><div class="body"><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p>
+      ${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.link_label || "Visit")} →</a>` : ""}</div></div>`;
   }).join("");
 
-  $("skillList").innerHTML = (D.skills || []).map(x => `<div class="srow"><h4>${esc(x.group)}</h4>${chips(x.items)}</div>`).join("");
+  $("toolsHead").innerHTML = `${icon("tool")} Key tools`;
+  $("toolRows").innerHTML = (D.skills || []).map(s => `<div class="trow"><span class="lbl">${esc(s.group)}</span>${chips(s.items)}</div>`).join("");
 
   const certs = D.certifications || [];
-  $("certList").innerHTML = certs.map(c => `<li><div><div class="t">${esc(c.title)}</div><div class="small">${esc(c.issuer)}</div></div>
-    ${c.date ? `<span class="small">${esc(c.date)}</span>` : ""}</li>`).join("");
+  $("certHead").innerHTML = `${icon("award")} Certifications`;
+  $("certList").innerHTML = certs.map((c, k) => `<li${k >= 6 ? ' class="more"' : ""}><span class="org">${c.logo && isImg(c.logo) ? `<img src="${esc(c.logo)}" alt="">` : esc(c.logo || initials(c.issuer))}</span>
+    <div><div class="t">${esc(c.title)}</div><div class="small">${esc([c.issuer, c.date].filter(Boolean).join(" · "))}</div></div></li>`).join("");
+  $("certMore").innerHTML = certs.length > 6 ? `<button class="linkbtn" onclick="toggleCerts(this)">+ ${certs.length - 6} more</button>` : "";
   const edu = (D.education || []).filter(e => e.title);
   $("eduNote").textContent = edu.length ? "Education: " + edu.map(e => [e.title, e.org, e.years].filter(Boolean).join(", ")).join(" · ") : "";
-  $("certifications").style.display = certs.length || edu.length ? "" : "none";
+  $("certCard").style.display = certs.length || edu.length ? "" : "none";
 
   let c = "";
-  if (P.email) c += `<a href="mailto:${esc(P.email)}">✉ ${esc(P.email)}</a>`;
-  if (P.website) c += ext(P.website, `🌐 ${esc(P.website.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
-  if (P.learning_portal) c += ext(P.learning_portal, `🎓 ${esc(P.learning_portal.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
+  if (P.email) c += `<a href="mailto:${esc(P.email)}">${icon("mail")} ${esc(P.email)}</a>`;
+  if (P.website) c += ext(P.website, `${icon("globe")} ${esc(P.website.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
+  if (P.learning_portal) c += ext(P.learning_portal, `${icon("cap")} ${esc(P.learning_portal.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
   $("contactLinks").innerHTML = c;
 
   $("copy").textContent = `© ${new Date().getFullYear()} ${P.name}`;
-  $("footNote").textContent = SHEET_API ? (P.footer_note || "") : "";
+  $("footNote").textContent = [P.built_with ? "Built with " + P.built_with : "", SHEET_API ? P.footer_note : ""].filter(Boolean).join(" · ");
   window.__EMAIL = P.email;
-  if (P.github_user) loadRepos(P.github_user);
 }
+
+function renderProjects(){
+  const ps = DATA.projects || [];
+  const featured = ps.filter(p => /^y/i.test(String(p.featured || "")));
+  const groups = [...new Set(ps.map(p => p.group).filter(Boolean))];
+  const tabs = (featured.length ? ["Highlights"] : []).concat(groups, ["All"]);
+  if (!tabs.includes(TAB)) TAB = tabs[0];
+  $("tabs").innerHTML = tabs.map(t => {
+    const n = t === "Highlights" ? featured.length : t === "All" ? ps.length : ps.filter(p => p.group === t).length;
+    return `<button class="tab${t === TAB ? " on" : ""}" onclick="setTab('${esc(t)}')">${esc(t)}<span>${n}</span></button>`;
+  }).join("");
+  const shown = TAB === "Highlights" ? featured : TAB === "All" ? ps : ps.filter(p => p.group === TAB);
+  $("projGrid").innerHTML = shown.map(p => `<div class="card proj lift">
+    <div class="thumb">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : `<div class="ph">${icon(p.icon)}</div>`}
+      ${p.badge ? `<span class="tag">${esc(p.badge)}</span>` : ""}</div>
+    <div class="body"><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p>
+      ${p.tags ? `<div class="bw">Built with</div>${chips(p.tags)}` : ""}${p.link ? `<div class="foot"><a href="${esc(p.link)}" target="_blank" rel="noopener">Visit →</a></div>` : ""}</div></div>`).join("");
+}
+function setTab(t){ TAB = t; renderProjects(); }
+function toggleJob(i, btn){ const j = $("job" + i); j.classList.toggle("open"); btn.textContent = j.classList.contains("open") ? "Show less" : `Show ${j.querySelectorAll("li.more").length} more`; }
+function toggleCerts(btn){ const l = $("certList"); l.classList.toggle("open"); btn.textContent = l.classList.contains("open") ? "Show less" : `+ ${l.querySelectorAll("li.more").length} more`; }
 
 /* Turns a YouTube, Vimeo, Google Drive or .mp4 link into something playable on the page */
 function embed(url){
@@ -757,23 +863,6 @@ function embed(url){
   if ((m = url.match(/drive\.google\.com\/(?:file\/d\/|open\?id=)([\w-]+)/))) return { type: "iframe", src: `https://drive.google.com/file/d/${m[1]}/preview` };
   if (/\.(mp4|webm|ogg)(\?|$)/i.test(url)) return { type: "video", src: url };
   return { type: "link" };
-}
-
-/* Optional: show live GitHub stats on project cards whose name matches a public repo */
-async function loadRepos(user){
-  try {
-    const r = await fetch(`https://api.github.com/users/${encodeURIComponent(user)}/repos?per_page=100`);
-    if (!r.ok) return;
-    const repos = await r.json();
-    const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
-    document.querySelectorAll(".proj").forEach(card => {
-      const repo = repos.find(x => norm(x.name) === norm(card.dataset.name));
-      if (!repo) return;
-      const days = Math.round((Date.now() - new Date(repo.pushed_at)) / 864e5);
-      card.insertAdjacentHTML("beforeend", `<div class="meta">${esc(repo.language || "")} · ★ ${repo.stargazers_count} · updated ${days}d ago ·
-        <a href="${repo.html_url}" target="_blank" rel="noopener">GitHub</a></div>`);
-    });
-  } catch (e) {}
 }
 
 /* Contact form: posts to the Apps Script if set, otherwise opens the visitor's email app */
@@ -791,6 +880,10 @@ $("contactForm").addEventListener("submit", async ev => {
     msg.textContent = "Thanks, your message has been sent."; f.reset();
   } catch (e) { msg.textContent = "Could not send. Please email me directly."; }
 });
+
+/* Print: show every project */
+window.addEventListener("beforeprint", () => { if (TAB !== "All") { window.__tab = TAB; setTab("All"); } });
+window.addEventListener("afterprint", () => { if (window.__tab) { setTab(window.__tab); window.__tab = null; } });
 
 /* Theme */
 const savedTheme = (() => { try { return localStorage.getItem("theme"); } catch (e) { return null; } })();
