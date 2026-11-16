@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pravin Kumar Singh · Digital Health & Learning Technology</title>
+<meta name="description" content="Pravin Kumar Singh: 23 years in technology, 12 supporting India's National AIDS Control Programme. Learning platforms, web portals, ODK field-data tools, automation and AI-enabled programme technology.">
+<style>
+:root{
+  --accent:#2E5FA3; --accent-2:#1F4A86; --accent-soft:#EAF0F8; --navy:#14284A;
+  --bg:#F5F7FB; --card:#FFFFFF; --ink:#17243A; --muted:#5A6880; --line:#E1E7F0;
+  --chip:#EEF3FA; --chip-ink:#23497F; --ok:#2E8B57;
+  --shadow:0 1px 2px rgba(20,40,74,.04),0 4px 14px rgba(20,40,74,.05);
+  --shadow-hover:0 2px 4px rgba(20,40,74,.06),0 10px 24px rgba(20,40,74,.09);
+  --font:"Segoe UI",Calibri,system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --r:12px;
+}
+[data-theme="dark"]{
+  --accent:#86ABE3; --accent-2:#A9C3EC; --accent-soft:#1B2A43; --navy:#0B1527;
+  --bg:#0E1626; --card:#152137; --ink:#E5ECF6; --muted:#9AA8BE; --line:#22324C;
+  --chip:#1D2D49; --chip-ink:#C7D7F0; --shadow:0 1px 2px rgba(0,0,0,.3); --shadow-hover:0 6px 18px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
+.grid{display:grid;gap:12px}
+.cols2{grid-template-columns:repeat(2,1fr)} .cols3{grid-template-columns:repeat(3,1fr)}
+.small{font-size:13px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.chip{background:var(--chip);color:var(--chip-ink);font-size:12px;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.kicker{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
+.brand{font-weight:700;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:9px}
+.mono{width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;letter-spacing:.02em}
+[data-theme="dark"] .mono{color:#0E1626}
+.nav-links{display:flex;gap:16px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13.5px}
+.nav-links a:hover{color:var(--accent)}
+.icon-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;width:32px;height:32px;cursor:pointer;display:grid;place-items:center}
+
+/* hero */
+.hero{padding:40px 0 34px;background:radial-gradient(700px 300px at 95% -10%,var(--accent-soft),transparent 70%),radial-gradient(500px 260px at -5% 110%,var(--accent-soft),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+.badge{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);color:var(--accent-2);border-radius:999px;padding:3px 11px;font-size:12px;font-weight:600}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 20%,transparent)}
+h1{font-size:clamp(32px,4.6vw,44px);line-height:1.08;margin:12px 0 6px;letter-spacing:-.6px}
+h1 span{color:var(--accent)}
+.headline{font-size:16.5px;color:var(--accent-2);margin:0 0 12px;font-weight:600}
+.summary{margin:0 0 10px}
+.open-to{font-size:13px;color:var(--muted);margin:0;padding-left:10px;border-left:3px solid var(--accent-soft)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:border-color .2s,transform .15s}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+[data-theme="dark"] .btn.primary{color:#0E1626}
+.side{display:grid;gap:10px}
+.now h3{margin:5px 0 2px;font-size:15.5px}
+.kicker.live::before{content:"● ";color:var(--ok)}
+.feat{background:linear-gradient(145deg,#2E5FA3 0%,#1F4A86 55%,#14284A 100%);border:0;color:#fff}
+.feat .kicker{color:#C9D9F2}
+.feat h3{margin:5px 0 6px;font-size:16.5px;color:#fff}
+.feat p{margin:0;font-size:13px;color:#E3ECF8}
+.feat .chip{background:rgba(255,255,255,.14);color:#fff}
+.feat .tagline{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border-radius:6px;padding:2px 8px}
+.loc{display:flex;align-items:center;gap:12px;padding:12px 16px}
+.loc .pin{width:32px;height:32px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}
+.loc b{display:block;font-size:14px}
+
+/* sections */
+section{padding:34px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+h2{font-size:21px;margin:0;letter-spacing:-.2px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--accent)}
+.sec-head p{margin:0;color:var(--muted);font-size:13px}
+
+/* experience */
+.jobs{display:grid;gap:10px}
+.job .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.job h3{margin:0;font-size:15.5px}
+.job .org{color:var(--accent);font-size:13.5px;font-weight:600}
+.when{font-size:12px;color:var(--accent-2);background:var(--accent-soft);border-radius:999px;padding:2px 10px;white-space:nowrap;font-weight:600}
+.job .note{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.job ul{margin:8px 0 0;padding-left:17px;columns:1}
+.job li{margin:3px 0;font-size:13.5px}
+.job li::marker{color:var(--accent)}
+.job.lead ul{columns:2;column-gap:28px}
+.job.lead li{break-inside:avoid}
+
+/* build + projects */
+.svc .num{font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.svc h3,.proj h3{margin:4px 0 3px;font-size:14.5px}
+.svc p,.proj p{margin:0;font-size:13px;color:var(--muted)}
+.lift:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.group-label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:18px 0 8px;display:flex;align-items:center;gap:10px}
+.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
+.group-label:first-child{margin-top:0}
+.proj{display:flex;flex-direction:column}
+.proj .top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent-2);border-radius:5px;padding:2px 6px;white-space:nowrap;align-self:flex-start;margin-bottom:2px}
+.proj .chips{margin-top:auto;padding-top:10px}
+.proj a.more{font-size:12.5px;font-weight:600;margin-top:8px;text-decoration:none}
+.meta{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* videos */
+.vid{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.vid .frame{position:relative;aspect-ratio:16/9;background:var(--navy)}
+.vid iframe,.vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#C9D9F2;font-size:13px;text-decoration:none}
+.vid .empty b{display:block;font-size:28px;line-height:1;margin-bottom:6px}
+.vid .body{padding:12px 16px 14px}
+.vid h3{margin:0 0 3px;font-size:14.5px}
+.vid p{margin:0;font-size:13px;color:var(--muted)}
+.vid a.more{display:inline-block;font-size:12.5px;font-weight:600;margin-top:6px;text-decoration:none}
+
+/* skills */
+.skills{padding:4px 18px}
+.srow{display:grid;grid-template-columns:200px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);align-items:start}
+.srow:last-child{border-bottom:0}
+.srow h4{margin:3px 0 0;font-size:13px;color:var(--accent-2)}
+.srow .chips{margin-top:0}
+
+/* certifications */
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;margin:0;padding:0;list-style:none}
+.certs li{padding:8px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:10px}
+.certs .t{font-size:13.5px;font-weight:600}
+.edu-note{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:24px;align-items:start}
+.contact-grid .lead{margin:0 0 12px;color:var(--muted)}
+.clinks{display:grid;gap:6px;font-size:13.5px}
+.clinks a{text-decoration:none;font-weight:600}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form label{font-size:12px;color:var(--muted);display:block;margin-bottom:3px}
+input,textarea{width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 11px}
+input:focus,textarea:focus{outline:3px solid var(--accent-soft);border-color:var(--accent)}
+form .full{grid-column:1/-1}
+#formMsg{font-size:13px;color:var(--muted);align-self:center}
+footer{border-top:1px solid var(--line);padding:16px 0 28px;font-size:12.5px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid,.contact-grid{grid-template-columns:1fr} .cols3{grid-template-columns:repeat(2,1fr)}
+  .job.lead ul{columns:1} .nav-links a{display:none}
+}
+@media (max-width:600px){
+  .cols2,.cols3,.certs{grid-template-columns:1fr} form{grid-template-columns:1fr}
+  .srow{grid-template-columns:1fr;gap:6px}
+}
+/* print / Save as PDF */
+@media print{
+  :root{--bg:#fff;--card:#fff;--shadow:none}
+  header.nav,.actions,#contact,#videos,.icon-btn{display:none!important}
+  body{font-size:11.5px} .hero{padding:6px 0;background:none}
+  .feat{background:#fff;color:var(--ink);border:1px solid var(--line)} .feat *{color:var(--ink)!important}
+  section{padding:12px 0} .card{break-inside:avoid;box-shadow:none}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top"><span class="mono" id="mono"></span><span id="navName"></span></a>
+  <nav class="nav-links">
+    <a href="#experience">Experience</a><a href="#build">What I build</a><a href="#projects">Projects</a>
+    <a href="#videos">Videos</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+    <button class="icon-btn" id="themeBtn" title="Switch light/dark" aria-label="Switch light or dark theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </nav>
+</div></header>
+
+<main id="top">
+  <div class="hero"><div class="wrap hero-grid">
+    <div>
+      <span class="badge" id="statusBadge"></span>
+      <h1 id="heroName"></h1>
+      <p class="headline" id="headline"></p>
+      <p class="summary" id="summary"></p>
+      <p class="open-to" id="openTo"></p>
+      <div class="actions" id="actions"></div>
+    </div>
+    <div class="side" id="side"></div>
+  </div></div>
+
+  <section id="experience"><div class="wrap">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="jobs" id="jobs"></div>
+  </div></section>
+
+  <section id="build"><div class="wrap">
+    <div class="sec-head"><h2>What I build</h2><p>Working systems for health and development programmes.</p></div>
+    <div class="grid cols3" id="services"></div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="sec-head"><h2>Projects</h2><p>What I built myself, and what I delivered with vendors and partners.</p></div>
+    <div id="projectGroups"></div>
+  </div></section>
+
+  <section id="videos"><div class="wrap">
+    <div class="sec-head"><h2>Videos</h2><p>Short introductions to Erada Digital Solutions and Erada Learning.</p></div>
+    <div class="grid cols2" id="videoGrid"></div>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="sec-head"><h2>Skills &amp; tools</h2></div>
+    <div class="card skills" id="skillList"></div>
+  </div></section>
+
+  <section id="certifications"><div class="wrap">
+    <div class="sec-head"><h2>Certifications</h2></div>
+    <div class="card"><ul class="certs" id="certList"></ul><p class="edu-note" id="eduNote"></p></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap contact-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:8px"><h2>Get in touch</h2></div>
+      <p class="lead">Hiring, consulting or collaborating: messages reach my inbox.</p>
+      <div class="clinks" id="contactLinks"></div>
+    </div>
+    <form id="contactForm" class="card">
+      <div><label for="fName">Your name</label><input id="fName" name="name" required></div>
+      <div><label for="fEmail">Your email</label><input id="fEmail" name="email" type="email" required></div>
+      <div class="full"><label for="fMsg">Message</label><textarea id="fMsg" name="message" rows="4" required></textarea></div>
+      <div class="full" style="display:flex;gap:12px"><button class="btn primary" type="submit">Send message</button><span id="formMsg"></span></div>
+    </form>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span id="copy"></span><span id="footNote"></span></div></footer>
+
+<script>
+/* ============ SETTINGS ============
+   SHEET_API: paste your Apps Script Web App URL here (ends in /exec) to load content
+   from your Google Sheet and receive contact-form messages. Leave empty to use the
+   built-in content below. */
+const SHEET_API = "";
+
+/* Built-in content (used when SHEET_API is empty or unreachable) */
+const DEFAULT_DATA = {
+ "profile": {
+  "name": "Pravin Kumar Singh",
+  "headline": "Digital Health & Learning Technology Specialist · Programme systems and AI-enabled platforms",
+  "summary": "23 years in technology, including 12 supporting India's National AIDS Control Programme with I-TECH India. I build learning platforms, web portals, ODK field-data tools and automated reports, and I run vendor delivery, UAT and rollout for mobile and AI-enabled apps. I work with NACO, NIC, SACS, MoHFW and PEPFAR/HRSA partners to turn programme needs into systems that field teams use.",
+  "open_to": "Senior technical, consulting and programme-implementation roles in public health and development. Remote, hybrid or relocation across India.",
+  "status_badge": "Open to opportunities",
+  "location": "New Delhi, India",
+  "languages": "Hindi (native), English (professional), Marathi",
+  "email": "pravin0103@hotmail.com",
+  "website": "https://eradadigital.com",
+  "website_label": "Erada Digital Solutions",
+  "learning_portal": "http://learn.eradadigital.com/",
+  "learning_portal_label": "Erada Learning",
+  "phone": "",
+  "linkedin": "",
+  "github_user": "",
+  "current_role": "IT Manager – Digital Platforms & Programme Technology",
+  "current_org": "I-TECH India (University of Washington)",
+  "current_since": "Since Jul 2014 · New Delhi · Consultant since Apr 2026",
+  "featured_title": "Distance Learning Platform",
+  "featured_text": "A PHP 8.3/MySQL platform for national distance-learning sessions: scheduling, personalised links, SMS/WhatsApp/email alerts, attendance, QR-verified certificates, 2FA and dashboards, with Google Gemini answering learner questions.",
+  "featured_note": "Demonstrated in public health for wider adoption",
+  "featured_tags": "PHP 8.3, MySQL, Gemini API, 2FA, QR certificates",
+  "footer_note": "Content managed in Google Sheets"
+ },
+ "stats": [],
+ "experience": [
+  {
+   "start": "Jul 2014",
+   "end": "Present",
+   "location": "New Delhi",
+   "role": "IT Manager – Digital Platforms & Programme Technology",
+   "org": "I-TECH India (University of Washington)",
+   "note": "Consultant since April 2026. Technology lead for I-TECH India's NACP work under PEPFAR/HRSA, across the head office and state offices.",
+   "bullets": "Designed and built a distance-learning platform on my own in PHP 8.3/MySQL to replace Zoom forms, Mailchimp and Excel for national sessions: scheduling, personalised links, SMS/WhatsApp/email alerts, attendance, QR-verified certificates, RBAC, 2FA and dashboards, with Google Gemini for learner Q&A. Demonstrated in public health for wider adoption.\nLed technical delivery of 500+ national and regional distance-learning sessions since 2014, covering slide set-up, presenter orientation, live support, recording and editing, attendance, certificates and sharing content with states and ART Centres.\nImplemented and manage Moodle for NACO's Strategic Information division and Canvas on AWS, including course setup, enrolments, assessments, certificates, completion tracking and learner support.\nDesigned and deployed ODK Central/XLSForm supervision tools across 130+ ART Centres (ART Performance, CSC, ART Plus/SACEP, SSS Readiness, ICTC and SSK), with action plans generated in Apps Script, emailed to officials and structured for Power BI; wrote user guides and supported field teams during rollout.\nBuilt an automated e-certificate system with Google Apps Script, Slides and Sheets that creates and emails personalised certificates to training participants, replacing manual certificate preparation.\nPiloted an AI agent on DigitalOcean's Gradient platform with two modules: an ART Centre finder with map-based directions, and a guidelines assistant that answers Medical Officers' questions on HIV treatment regimens.\nManaged the National HIV Treatment Guidelines app from ToR and vendor selection through security audit and Play Store rollout: an offline reference to a 556-page clinical guideline with 1,600+ organic downloads. Still manage its content updates.\nRan the full vendor lifecycle for the MAS digital modules (QR-based ICTC self-registration and a digital contact directory): scope, contract, UAT with the NACO IT Head, government acceptance and contract closure.\nCoordinated requirements, UAT and rollout for AI and communication tools: SAMVAAD counselling app (32,000+ sessions, handed over to state health authorities), SOCH conversational AI, ARTMitr IVRS (13,000 PLHIV reached, 87% ART collection rate) and Nirantar teleconsultation.\nKept servers, networks, email, storage, backups and endpoint security running across head office and state offices with 98%+ uptime; moved the organisation from Microsoft 365 to Google Workspace and set up a VPN file server for remote staff.\nLed I-TECH India's 2026 technical proposal for a Bengali primary-teacher learning platform in West Bengal: LMS architecture, offline delivery, content approach, UAT plan and demo course.\nAct as technology liaison among NACO, NIC, SACS, MoHFW, PEPFAR/HRSA partners and vendors; manage AMCs, SLAs, IT assets and procurement, and write the ToRs, IT policies, disaster-recovery plans, SOPs and user guides behind each rollout."
+  },
+  {
+   "start": "2026",
+   "end": "Present",
+   "location": "New Delhi",
+   "role": "Founder · Independent Digital Learning & Technology Consultant",
+   "org": "Erada Digital Solutions",
+   "note": "",
+   "bullets": "Set up Erada Digital Solutions to offer Moodle and WordPress platforms, ODK/KoBo systems, web applications and programme technology to NGOs and public-health organisations.\nScoped and priced a Moodle LMS for a Delhi-area NGO: 50 users, a 10-week bilingual Hindi/English course, Zoom integration, automated certificates and offline mobile access.\nLaunched Erada Learning, a free e-learning platform with foundational courses in public health, digital health and programme management."
+  },
+  {
+   "start": "Nov 2012",
+   "end": "Jun 2014",
+   "location": "New Delhi",
+   "role": "IT Manager – Infrastructure & Systems",
+   "org": "FHI 360 (deputed via VVM Solutions)",
+   "note": "",
+   "bullets": "Managed IT infrastructure across multiple FHI 360 locations: Windows Server 2008 R2 on HP ProLiant with RAID 5, Active Directory, networks, storage, email and endpoint security.\nAdministered the Cisco ASA 5500 firewall and set up scan-to-folder and scan-to-email workflows on Canon imageRUNNER devices.\nProvided remote and on-site IT support to users at the NACO office, resolving network, application and hardware issues.\nKept systems stable and audit-ready with IT SOPs, asset records, backups and business-continuity documentation.\nCoordinated vendors for infrastructure support, maintenance, upgrades and procurement."
+  },
+  {
+   "start": "Oct 2011",
+   "end": "Oct 2012",
+   "location": "New Delhi",
+   "role": "IT Manager – EMR & Clinic Systems",
+   "org": "Pathfinder Health India",
+   "note": "",
+   "bullets": "Deployed the Easy Clinic EMR across clinics: wrote test cases, tested desktop and web versions, reported bugs, configured the system, managed SQL backups and trained doctors and clinical staff.\nTested patient-information integration with NFC-enabled smartphones, including BlackBerry, for point-of-care data capture.\nManaged IT for 60+ users across multiple clinics (Windows Server 2008 R2, Wi-Fi, networks and remote support) with 98% internet uptime.\nSet up a SQUID proxy server on Ubuntu Linux for internet access control and network security.\nWrote IT policies, SOPs and process documents, and coordinated vendors on procurement and issue resolution."
+  },
+  {
+   "start": "Mar 2003",
+   "end": "Oct 2011",
+   "location": "Pune",
+   "role": "Production Support Manager / Account Manager",
+   "org": "E-Dictate IT Solutions",
+   "note": "",
+   "bullets": "Managed production support for healthcare documentation and EMR/EHR workflows across several US client accounts, delivering 40,000+ lines a day within quality and turnaround targets.\nLed a team of 21 across two departments: shift planning, workflow, quality checks, recruitment, training and rollout of new processes.\nRan regular web meetings with US clients on process changes, new software and workflow improvements, and handled daily client communication on production issues.\nAdministered Windows Server 2003, the office network and Wi-Fi, and gave first- and second-level remote support to home-based staff.\nWrote process documents, client onboarding material and training content for new applications and workflows."
+  }
+ ],
+ "services": [
+  {
+   "num": "01",
+   "kicker": "Learning platforms",
+   "title": "LMS and distance learning",
+   "text": "Moodle and Canvas setup and administration, live session delivery, certificates and completion tracking.",
+   "tags": "Moodle, Canvas, Adobe Connect, Zoom"
+  },
+  {
+   "num": "02",
+   "kicker": "Field data",
+   "title": "Supervision tools that work offline",
+   "text": "ODK and KoboToolbox forms with scoring, skip logic and cascading State → District → facility lists.",
+   "tags": "ODK Central, KoboToolbox, XLSForm"
+  },
+  {
+   "num": "03",
+   "kicker": "Web applications",
+   "title": "Portals for programme teams",
+   "text": "PHP/MySQL apps with logins, roles, 2FA, notifications, certificates and dashboards.",
+   "tags": "PHP 8.3, MySQL, WordPress, REST APIs"
+  },
+  {
+   "num": "04",
+   "kicker": "Automation & dashboards",
+   "title": "Reports that write themselves",
+   "text": "Apps Script and Excel VBA pipelines that turn submissions into PDF action plans, emails and Power BI data.",
+   "tags": "Apps Script, Excel VBA, Power BI"
+  },
+  {
+   "num": "05",
+   "kicker": "AI & communications",
+   "title": "AI-enabled tools, tested properly",
+   "text": "Gemini API integration, chatbot requirements and UAT, SMS/WhatsApp messaging and IVRS platforms.",
+   "tags": "Gemini API, Chatbots, MSG91, IVRS"
+  },
+  {
+   "num": "06",
+   "kicker": "Infrastructure & security",
+   "title": "Servers, cloud and audits",
+   "text": "Cloud hosting, firewalls, Microsoft 365 and Google Workspace admin, and Nessus/VA security audits.",
+   "tags": "AWS, Azure, DigitalOcean, NIC NGC"
+  }
+ ],
+ "projects": [
+  {
+   "group": "Built by me",
+   "name": "Distance Learning Platform",
+   "badge": "Demonstrated for adoption",
+   "description": "Full-stack platform for national distance-learning operations: scheduling, personalised links, SMS/WhatsApp/email alerts, attendance, QR-verified certificates, RBAC, 2FA and Gemini-powered learner Q&A.",
+   "tags": "PHP 8.3, MySQL, Gemini API",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "Paperless ART Action Plans",
+   "badge": "",
+   "description": "ODK Central → Google Sheets → Apps Script → PDF action plans, emailed to officials after each ART Centre assessment.",
+   "tags": "ODK Central, Apps Script, PDF",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "ODK Supervision Suite",
+   "badge": "130+ ART Centres",
+   "description": "XLSForm tools for ART Performance, CSC, ART Plus/SACEP, SSS Readiness, ICTC and SSK, with scoring and Power BI-ready outputs.",
+   "tags": "ODK Central, XLSForm, Power BI",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "Equipment Mapping Form",
+   "badge": "839 ART Centres",
+   "description": "KoboToolbox form with cascading State → District → ART Centre selection across all ART Centres nationally.",
+   "tags": "KoboToolbox, XLSForm",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "Strategic Information e-Learning",
+   "badge": "",
+   "description": "Moodle course for State and District SI Officers under NACP, on a server I set up and maintain.",
+   "tags": "Moodle, SCORM",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "Automated e-Certificate System",
+   "badge": "",
+   "description": "Google Apps Script, Slides and Sheets workflow that fills in participant names, course and date, and emails personalised certificates at scale.",
+   "tags": "Apps Script, Google Slides, Sheets",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "AI Agent Pilot: ART Centre Finder & Guidelines Assistant",
+   "badge": "Pilot",
+   "description": "Low-code AI agent on DigitalOcean Gradient: finds ART Centres with map directions and answers Medical Officers' questions from the national HIV guidelines.",
+   "tags": "DigitalOcean Gradient, AI agent",
+   "link": ""
+  },
+  {
+   "group": "Built by me",
+   "name": "Training Data Processing Tool",
+   "badge": "",
+   "description": "Excel VBA tool with step-by-step buttons that compiles and cleans national and regional session data.",
+   "tags": "Excel VBA",
+   "link": ""
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "National HIV Treatment Guidelines App",
+   "badge": "1,600+ downloads",
+   "description": "Offline Android reference app built from a 556-page clinical guideline. ToR, vendor selection, security audit, Play Store rollout and updates.",
+   "tags": "Android, Security audit",
+   "link": "https://treatandcareguide.naco.gov.in"
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "SAMVAAD AI Counselling App",
+   "badge": "32,000+ sessions",
+   "description": "AI-enabled tablet app with 8 counselling modules across 13 HIV themes. Requirements, UAT and handover to state health authorities.",
+   "tags": "AI, Tablet app, UAT",
+   "link": ""
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "SOCH Conversational AI",
+   "badge": "",
+   "description": "Chatbot that lets programme managers query national programme data in plain language, with role-based outputs.",
+   "tags": "Conversational AI, RBAC",
+   "link": ""
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "ARTMitr IVRS",
+   "badge": "13,000 PLHIV reached",
+   "description": "IVRS and SMS platform during COVID-19 that supported an 87% ART collection rate.",
+   "tags": "IVRS, SMS",
+   "link": ""
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "Nirantar Teleconsultation",
+   "badge": "",
+   "description": "Cloud platform for virtual consultations, clinical messaging and e-prescriptions for HIV programme clinicians.",
+   "tags": "Teleconsultation, Cloud",
+   "link": ""
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "MAS Digital Modules",
+   "badge": "Rolled out",
+   "description": "QR-based ICTC self-registration and a digital contact directory, taken from scope to government acceptance and closure.",
+   "tags": "QR, Web app, UAT",
+   "link": ""
+  },
+  {
+   "group": "Coordinated with vendors & partners",
+   "name": "ART Adherence Tool",
+   "badge": "",
+   "description": "Android app for ART adherence. Enhancements, testing, Play Store policy compliance and live release management.",
+   "tags": "Android, Google Play",
+   "link": ""
+  },
+  {
+   "group": "Own initiatives",
+   "name": "Erada Digital Solutions",
+   "badge": "Founded 2026",
+   "description": "Digital solutions for NGOs and public-health programmes: web applications, WordPress websites, Moodle LMS, ODK/KoBo data tools, dashboards and automation.",
+   "tags": "Web apps, Moodle, ODK, WordPress",
+   "link": "https://eradadigital.com"
+  },
+  {
+   "group": "Own initiatives",
+   "name": "Erada Learning",
+   "badge": "Free · In development",
+   "description": "Open e-learning platform with foundational courses in public health, digital health and programme management.",
+   "tags": "Moodle, Articulate",
+   "link": "http://learn.eradadigital.com/"
+  }
+ ],
+ "skills": [
+  {
+   "group": "LMS & learning",
+   "items": "Moodle administration, Canvas, Adobe Connect, Course setup, Enrolments, Assessments, Certificates, Completion tracking"
+  },
+  {
+   "group": "Field data",
+   "items": "ODK Central, KoboToolbox, XLSForm, Skip logic, Offline collection, Google Sheets & Apps Script"
+  },
+  {
+   "group": "AI & digital tools",
+   "items": "Gemini AI API, DigitalOcean Gradient, Conversational AI / chatbots, SMS & WhatsApp APIs, Zoom OAuth, AI-enabled app testing"
+  },
+  {
+   "group": "Development",
+   "items": "PHP 8.3, MySQL, SQL, Python, JavaScript, WordPress, REST / API integration"
+  },
+  {
+   "group": "Analytics",
+   "items": "Power BI, Tableau, Excel & VBA, ODK / KoBo export pipelines"
+  },
+  {
+   "group": "Cloud & hosting",
+   "items": "AWS, Azure, DigitalOcean, NIC NGC Cloud, Apache, Ubuntu, CentOS"
+  },
+  {
+   "group": "Testing & security",
+   "items": "UAT & test cases, Issue tracking, Nessus / VA audits, 2FA, RBAC, bcrypt hashing, Backups & disaster recovery"
+  },
+  {
+   "group": "Mobile & communications",
+   "items": "Android, Google Play Store, Teleconsultation, IVRS, MSG91, Tata Tele Smartflo, Mailchimp"
+  },
+  {
+   "group": "Infrastructure",
+   "items": "Windows Server 2003 / 2008 / 2012, Linux, Active Directory, Cisco ASA 5500, Dell SonicWALL, SQUID proxy, RAID 5, VPN, Trend Micro"
+  },
+  {
+   "group": "Collaboration",
+   "items": "Microsoft 365, SharePoint, Teams, Google Workspace admin & migration, Zoom"
+  },
+  {
+   "group": "Design & media",
+   "items": "Canva, Filmora, Movavi"
+  },
+  {
+   "group": "Health IT & programmes",
+   "items": "NACP / NACO, SOCH, ART Centres, ICTC, SACS, PEPFAR / HRSA, Easy Clinic EMR, MEDENT, AdvancedMD, Centricity"
+  },
+  {
+   "group": "Programme delivery",
+   "items": "ToR & SOW writing, Vendor management, AMCs & SLAs, IT asset management, Implementation planning, Risk logs, Rollout, Training, SOPs & user guides"
+  }
+ ],
+ "education": [
+  {
+   "title": "BCA – Bachelor of Computer Applications",
+   "org": "",
+   "years": "2002"
+  }
+ ],
+ "certifications": [
+  {
+   "title": "Strategic Applications of IT Project & Program Management",
+   "issuer": "University of Washington",
+   "date": ""
+  },
+  {
+   "title": "Global Health Project Management",
+   "issuer": "University of Washington",
+   "date": ""
+  },
+  {
+   "title": "Leadership & Management in Health",
+   "issuer": "University of Washington",
+   "date": ""
+  },
+  {
+   "title": "Monitoring & Evaluation in Global Health",
+   "issuer": "University of Washington",
+   "date": ""
+  },
+  {
+   "title": "Transforming Your Leadership & Management Skills",
+   "issuer": "University of Washington",
+   "date": ""
+  },
+  {
+   "title": "Introduction to Agentic AI",
+   "issuer": "NIELIT",
+   "date": ""
+  },
+  {
+   "title": "Bootcamp on Machine Learning for Cyber Security",
+   "issuer": "CDAC",
+   "date": ""
+  },
+  {
+   "title": "Geodata Processing using Python and Machine Learning",
+   "issuer": "ISRO",
+   "date": ""
+  },
+  {
+   "title": "KoboToolbox for Beginners",
+   "issuer": "Data for Development",
+   "date": ""
+  },
+  {
+   "title": "Data Visualisation",
+   "issuer": "Coursera / Global Health eLearning",
+   "date": ""
+  },
+  {
+   "title": "LMS Foundations",
+   "issuer": "LinkedIn Learning",
+   "date": ""
+  },
+  {
+   "title": "AWS for Beginners",
+   "issuer": "Great Learning",
+   "date": ""
+  },
+  {
+   "title": "Certificate in Software Engineering",
+   "issuer": "Aptech Computers",
+   "date": ""
+  },
+  {
+   "title": "Certificate in Data Processing",
+   "issuer": "Lakhotia Computers",
+   "date": ""
+  }
+ ],
+ "videos": [
+  {
+   "title": "Erada Digital Solutions",
+   "description": "A short introduction to Erada Digital Solutions: web applications, websites, Moodle learning platforms, ODK field-data tools, dashboards and automation for NGOs and public-health programmes.",
+   "url": "https://youtu.be/QWV5-Vd4gak",
+   "link": "https://eradadigital.com",
+   "link_label": "Visit Erada Digital Solutions"
+  },
+  {
+   "title": "Erada Digital Learning – how the Moodle LMS works",
+   "description": "How Erada Learning works: a free Moodle platform with foundational courses in public health, digital health and programme management.",
+   "url": "https://youtu.be/qBaylqFazK0",
+   "link": "http://learn.eradadigital.com/",
+   "link_label": "Visit Erada Learning"
+  }
+ ]
+};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const list = s => String(s || "").split(",").map(x => x.trim()).filter(Boolean);
+const chips = s => list(s).length ? `<div class="chips">${list(s).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>` : "";
+const ext = (url, label, cls = "btn") => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${label}</a>`;
+
+function render(D){
+  const P = D.profile;
+  const parts = String(P.name || "").trim().split(" ");
+  const last = parts.length > 1 ? parts.pop() : "";
+  document.title = `${P.name} · ${(P.headline || "").split("·")[0].trim()}`;
+  $("navName").textContent = P.name;
+  $("mono").textContent = String(P.name || "").split(" ").filter(Boolean).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+  $("heroName").innerHTML = `${esc(parts.join(" "))} <span>${esc(last)}</span>`;
+  $("statusBadge").textContent = P.status_badge || "";
+  $("statusBadge").style.display = P.status_badge ? "" : "none";
+  $("headline").textContent = P.headline || "";
+  $("summary").textContent = P.summary || "";
+  $("openTo").textContent = P.open_to ? "Open to: " + P.open_to : "";
+  $("openTo").style.display = P.open_to ? "" : "none";
+
+  let a = "";
+  if (P.email) a += `<a class="btn primary" href="mailto:${esc(P.email)}">✉ Email me</a>`;
+  if (P.website) a += ext(P.website, `🌐 ${esc(P.website_label || "Website")}`);
+  if (P.learning_portal) a += ext(P.learning_portal, `🎓 ${esc(P.learning_portal_label || "Learning portal")}`);
+  if (P.phone) a += `<a class="btn" href="tel:${esc(P.phone.replace(/\s/g, ""))}">☎ ${esc(P.phone)}</a>`;
+  if (P.linkedin) a += ext(P.linkedin, "LinkedIn");
+  if (P.github_user) a += ext(`https://github.com/${P.github_user}`, "GitHub");
+  a += `<button class="btn" onclick="window.print()">⤓ Save as PDF</button>`;
+  $("actions").innerHTML = a;
+
+  let s = `<div class="card now"><div class="kicker live">Currently</div><h3>${esc(P.current_role)}</h3>
+    <div class="small">${esc(P.current_org)}</div><div class="small">${esc(P.current_since)}</div></div>`;
+  if (P.featured_title) s += `<div class="card feat"><div class="kicker">Featured · built by me</div><h3>${esc(P.featured_title)}</h3>
+    <p>${esc(P.featured_text)}</p>${chips(P.featured_tags)}${P.featured_note ? `<span class="tagline">${esc(P.featured_note)}</span>` : ""}</div>`;
+  s += `<div class="card loc"><span class="pin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+    <div><b>${esc(P.location)}</b>${P.languages ? `<span class="small">Speaks ${esc(P.languages)}</span>` : ""}</div></div>`;
+  (D.stats || []).forEach(x => s += `<div class="card"><b style="font-size:22px;color:var(--accent)">${esc(x.value)}</b><div class="small">${esc(x.label)}</div></div>`);
+  $("side").innerHTML = s;
+
+  $("jobs").innerHTML = (D.experience || []).map((j, i) => {
+    const bullets = String(j.bullets || "").split("\n").map(x => x.trim()).filter(Boolean);
+    const when = [j.start, j.end].filter(Boolean).join(" – ") + (j.location ? ` · ${j.location}` : "");
+    return `<div class="card job${bullets.length > 5 ? " lead" : ""}"><div class="top"><div>
+      <h3>${esc(j.role || j.org)}</h3>${j.role ? `<div class="org">${esc(j.org)}</div>` : ""}</div>
+      <span class="when">${esc(when)}</span></div>
+      ${j.note ? `<p class="note">${esc(j.note)}</p>` : ""}
+      ${bullets.length ? `<ul>${bullets.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</div>`;
+  }).join("");
+
+  $("services").innerHTML = (D.services || []).map(x => `<div class="card svc lift">
+    <div class="num">${esc(x.num)} · ${esc(x.kicker)}</div><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p>${chips(x.tags)}</div>`).join("");
+
+  const groups = {};
+  (D.projects || []).forEach(p => (groups[p.group] = groups[p.group] || []).push(p));
+  $("projectGroups").innerHTML = Object.entries(groups).map(([g, ps]) => `<div class="group-label">${esc(g)}</div>
+    <div class="grid cols3">${ps.map(p => `<div class="card proj lift" data-name="${esc(p.name)}">
+      ${p.badge ? `<span class="tag">${esc(p.badge)}</span>` : ""}<h3>${esc(p.name)}</h3>
+      <p>${esc(p.description)}</p>${chips(p.tags)}
+      ${p.link ? `<a class="more" href="${esc(p.link)}" target="_blank" rel="noopener">Visit →</a>` : ""}</div>`).join("")}</div>`).join("");
+
+  const vids = D.videos || [];
+  $("videos").style.display = vids.length ? "" : "none";
+  $("videoGrid").style.gridTemplateColumns = vids.length === 1 ? "minmax(0,720px)" : "";
+  $("videoGrid").innerHTML = vids.map(v => {
+    const e = embed(v.url);
+    const frame = !v.url ? `<div class="empty"><div><b>▶</b>Video link to be added</div></div>`
+      : e.type === "video" ? `<video controls preload="metadata" src="${esc(e.src)}"></video>`
+      : e.type === "iframe" ? `<iframe src="${esc(e.src)}" title="${esc(v.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`
+      : `<a class="empty" href="${esc(v.url)}" target="_blank" rel="noopener"><div><b>▶</b>Watch the video</div></a>`;
+    return `<div class="card vid"><div class="frame">${frame}</div><div class="body">
+      <h3>${esc(v.title)}</h3><p>${esc(v.description)}</p>
+      ${v.link ? `<a class="more" href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.link_label || "Visit")} →</a>` : ""}</div></div>`;
+  }).join("");
+
+  $("skillList").innerHTML = (D.skills || []).map(x => `<div class="srow"><h4>${esc(x.group)}</h4>${chips(x.items)}</div>`).join("");
+
+  const certs = D.certifications || [];
+  $("certList").innerHTML = certs.map(c => `<li><div><div class="t">${esc(c.title)}</div><div class="small">${esc(c.issuer)}</div></div>
+    ${c.date ? `<span class="small">${esc(c.date)}</span>` : ""}</li>`).join("");
+  const edu = (D.education || []).filter(e => e.title);
+  $("eduNote").textContent = edu.length ? "Education: " + edu.map(e => [e.title, e.org, e.years].filter(Boolean).join(", ")).join(" · ") : "";
+  $("certifications").style.display = certs.length || edu.length ? "" : "none";
+
+  let c = "";
+  if (P.email) c += `<a href="mailto:${esc(P.email)}">✉ ${esc(P.email)}</a>`;
+  if (P.website) c += ext(P.website, `🌐 ${esc(P.website.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
+  if (P.learning_portal) c += ext(P.learning_portal, `🎓 ${esc(P.learning_portal.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
+  $("contactLinks").innerHTML = c;
+
+  $("copy").textContent = `© ${new Date().getFullYear()} ${P.name}`;
+  $("footNote").textContent = SHEET_API ? (P.footer_note || "") : "";
+  window.__EMAIL = P.email;
+  if (P.github_user) loadRepos(P.github_user);
+}
+
+/* Turns a YouTube, Vimeo, Google Drive or .mp4 link into something playable on the page */
+function embed(url){
+  url = String(url || "").trim();
+  if (!url) return { type: "none" };
+  let m;
+  if ((m = url.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/|live\/)|youtu\.be\/)([\w-]{11})/)))
+    return { type: "iframe", src: `https://www.youtube-nocookie.com/embed/${m[1]}?rel=0` };
+  if ((m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/))) return { type: "iframe", src: `https://player.vimeo.com/video/${m[1]}` };
+  if ((m = url.match(/drive\.google\.com\/(?:file\/d\/|open\?id=)([\w-]+)/))) return { type: "iframe", src: `https://drive.google.com/file/d/${m[1]}/preview` };
+  if (/\.(mp4|webm|ogg)(\?|$)/i.test(url)) return { type: "video", src: url };
+  return { type: "link" };
+}
+
+/* Optional: show live GitHub stats on project cards whose name matches a public repo */
+async function loadRepos(user){
+  try {
+    const r = await fetch(`https://api.github.com/users/${encodeURIComponent(user)}/repos?per_page=100`);
+    if (!r.ok) return;
+    const repos = await r.json();
+    const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+    document.querySelectorAll(".proj").forEach(card => {
+      const repo = repos.find(x => norm(x.name) === norm(card.dataset.name));
+      if (!repo) return;
+      const days = Math.round((Date.now() - new Date(repo.pushed_at)) / 864e5);
+      card.insertAdjacentHTML("beforeend", `<div class="meta">${esc(repo.language || "")} · ★ ${repo.stargazers_count} · updated ${days}d ago ·
+        <a href="${repo.html_url}" target="_blank" rel="noopener">GitHub</a></div>`);
+    });
+  } catch (e) {}
+}
+
+/* Contact form: posts to the Apps Script if set, otherwise opens the visitor's email app */
+$("contactForm").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const f = ev.target, msg = $("formMsg");
+  const body = { name: f.name.value, email: f.email.value, message: f.message.value };
+  if (!SHEET_API) {
+    location.href = `mailto:${window.__EMAIL}?subject=${encodeURIComponent("Message from " + body.name)}&body=${encodeURIComponent(body.message + "\n\n" + body.name + " <" + body.email + ">")}`;
+    return;
+  }
+  msg.textContent = "Sending…";
+  try {
+    await fetch(SHEET_API, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(body) });
+    msg.textContent = "Thanks, your message has been sent."; f.reset();
+  } catch (e) { msg.textContent = "Could not send. Please email me directly."; }
+});
+
+/* Theme */
+const savedTheme = (() => { try { return localStorage.getItem("theme"); } catch (e) { return null; } })();
+if (savedTheme === "dark") document.documentElement.dataset.theme = "dark";
+$("themeBtn").onclick = () => {
+  const d = document.documentElement.dataset.theme === "dark" ? "" : "dark";
+  document.documentElement.dataset.theme = d;
+  try { localStorage.setItem("theme", d); } catch (e) {}
+};
+
+/* Start: draw built-in content at once, then swap in Sheet content if available */
+render(DEFAULT_DATA);
+if (SHEET_API) fetch(SHEET_API).then(r => r.json()).then(d => { if (d && d.profile && d.profile.name) render(d); }).catch(() => {});
+</script>
+</body>
+</html>
