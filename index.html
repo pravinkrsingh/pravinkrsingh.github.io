@@ -184,6 +184,12 @@ h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--a
 .clinks{display:grid;gap:8px;font-size:13.5px}
 .clinks a{text-decoration:none;font-weight:600;display:flex;align-items:center;gap:8px}
 .clinks .ico{width:16px;height:16px}
+.sites{display:grid;gap:10px;margin-top:18px}
+.site{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);text-decoration:none;box-shadow:var(--shadow);transition:border-color .2s,transform .15s}
+.site:hover{border-color:var(--accent);transform:translateY(-1px)}
+.site .ib{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}
+.site b{display:block;font-size:13.5px;color:var(--ink)}
+.site span span{font-size:12.5px;color:var(--accent);font-weight:600}
 form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 form label{font-size:12px;color:var(--muted);display:block;margin-bottom:3px}
 input,textarea{width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:9px;padding:8px 11px}
@@ -270,6 +276,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
       <div class="sec-head" style="margin-bottom:8px"><h2>Get in touch</h2></div>
       <p class="lead">Hiring, consulting or collaborating: messages reach my inbox.</p>
       <div class="clinks" id="contactLinks"></div>
+      <div class="sites" id="siteLinks"></div>
     </div>
     <form id="contactForm" class="card">
       <div><label for="fName">Your name</label><input id="fName" name="name" required></div>
@@ -304,9 +311,9 @@ const DEFAULT_DATA = {
   "email": "pravin0103@hotmail.com",
   "email_2": "info@eradadigital.com",
   "website": "https://eradadigital.com",
-  "website_label": "Erada Digital Solutions",
+  "website_label": "Digital Solutions",
   "learning_portal": "http://learn.eradadigital.com/",
-  "learning_portal_label": "Erada Learning",
+  "learning_portal_label": "Learning Management Portal (LMS)",
   "phone": "",
   "linkedin": "",
   "github_user": "",
@@ -314,7 +321,7 @@ const DEFAULT_DATA = {
   "current_org": "I-TECH India (University of Washington)",
   "current_since": "Since 2014 · Consultant since Apr 2026",
   "footer_note": "Content managed in Google Sheets",
-  "built_with": "Maintained by Pravin Kumar Singh · Erada Digital Solutions"
+  "built_with": "Designed and maintained by Pravin Kumar Singh"
  },
  "stats": [],
  "experience": [
@@ -826,8 +833,6 @@ function render(D){
 
   let a = "";
   if (P.email) a += `<a class="btn primary" href="mailto:${esc(P.email)}">${icon("mail")} Email me</a>`;
-  if (P.website) a += ext(P.website, `${icon("globe")} ${esc(P.website_label || "Website")}`);
-  if (P.learning_portal) a += ext(P.learning_portal, `${icon("cap")} ${esc(P.learning_portal_label || "Learning portal")}`);
   if (P.linkedin) a += ext(P.linkedin, "LinkedIn");
   if (P.github_user) a += ext(`https://github.com/${P.github_user}`, "GitHub");
   a += `<button class="btn" onclick="window.print()">${icon("down")} Save as PDF</button>`;
@@ -890,12 +895,15 @@ function render(D){
   let c = "";
   if (P.email) c += `<a href="mailto:${esc(P.email)}">${icon("mail")} ${esc(P.email)}</a>`;
   if (P.email_2) c += `<a href="mailto:${esc(P.email_2)}">${icon("mail")} ${esc(P.email_2)}</a>`;
-  if (P.website) c += ext(P.website, `${icon("globe")} ${esc(P.website.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
-  if (P.learning_portal) c += ext(P.learning_portal, `${icon("cap")} ${esc(P.learning_portal.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
+  const dom = u => esc(String(u).replace(/^https?:\/\//, "").replace(/\/$/, ""));
+  let sites = "";
+  if (P.website) sites += `<a class="site" href="${esc(P.website)}" target="_blank" rel="noopener"><span class="ib">${icon("globe")}</span><span><b>${esc(P.website_label || "Website")}</b><span>${dom(P.website)}</span></span></a>`;
+  if (P.learning_portal) sites += `<a class="site" href="${esc(P.learning_portal)}" target="_blank" rel="noopener"><span class="ib">${icon("cap")}</span><span><b>${esc(P.learning_portal_label || "Learning portal")}</b><span>${dom(P.learning_portal)}</span></span></a>`;
+  $("siteLinks").innerHTML = sites;
   $("contactLinks").innerHTML = c;
 
   $("copy").textContent = `© ${new Date().getFullYear()} ${P.name}`;
-  $("footNote").textContent = [P.built_with ? "Built with " + P.built_with : "", SHEET_API ? P.footer_note : ""].filter(Boolean).join(" · ");
+  $("footNote").textContent = [P.built_with || "", SHEET_API ? P.footer_note : ""].filter(Boolean).join(" · ");
   window.__EMAIL = P.email;
 }
 
