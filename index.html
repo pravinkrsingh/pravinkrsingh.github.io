@@ -76,6 +76,8 @@ h1 span{color:var(--accent)}
 .facts{display:grid;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);text-align:left;font-size:13px;color:var(--muted)}
 .facts div{display:flex;align-items:center;gap:9px}
 .facts .ico{width:16px;height:16px;color:var(--accent);flex:none}
+.facts a{text-decoration:none;color:var(--ink)}
+.facts a:hover{color:var(--accent)}
 
 /* sections */
 section{padding:40px 0;border-top:1px solid var(--line)}
@@ -279,6 +281,7 @@ const DEFAULT_DATA = {
   "location": "New Delhi, India",
   "languages": "Hindi, English, Marathi",
   "email": "pravin0103@hotmail.com",
+  "email_2": "info@eradadigital.com",
   "website": "https://eradadigital.com",
   "website_label": "Erada Digital Solutions",
   "learning_portal": "http://learn.eradadigital.com/",
@@ -816,6 +819,8 @@ function render(D){
     <div class="facts">
       ${P.location ? `<div>${icon("map")}${esc(P.location)}</div>` : ""}
       ${P.languages ? `<div>${icon("lang")}${esc(P.languages)}</div>` : ""}
+      ${P.email ? `<div>${icon("mail")}<a href="mailto:${esc(P.email)}">${esc(P.email)}</a></div>` : ""}
+      ${P.email_2 ? `<div>${icon("mail")}<a href="mailto:${esc(P.email_2)}">${esc(P.email_2)}</a></div>` : ""}
       ${P.phone ? `<div>${icon("phone")}<a href="tel:${esc(P.phone.replace(/\s/g, ""))}">${esc(P.phone)}</a></div>` : ""}
     </div></div>`;
 
@@ -863,6 +868,7 @@ function render(D){
 
   let c = "";
   if (P.email) c += `<a href="mailto:${esc(P.email)}">${icon("mail")} ${esc(P.email)}</a>`;
+  if (P.email_2) c += `<a href="mailto:${esc(P.email_2)}">${icon("mail")} ${esc(P.email_2)}</a>`;
   if (P.website) c += ext(P.website, `${icon("globe")} ${esc(P.website.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
   if (P.learning_portal) c += ext(P.learning_portal, `${icon("cap")} ${esc(P.learning_portal.replace(/^https?:\/\//, "").replace(/\/$/, ""))}`, "");
   $("contactLinks").innerHTML = c;
