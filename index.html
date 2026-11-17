@@ -162,6 +162,11 @@ h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--a
 .vid h3{margin:0 0 2px;font-size:14.5px}
 .vid p{margin:0;font-size:13px;color:var(--muted)}
 .vid a{display:inline-block;font-size:12.5px;font-weight:600;margin-top:6px;text-decoration:none}
+.chip.ok{background:color-mix(in srgb,var(--ok) 13%,var(--card));color:var(--ok);font-weight:600;font-size:11px}
+.cta{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,var(--accent-soft),var(--card))}
+.cta b{display:block;font-size:15px}
+.cta span{font-size:13px;color:var(--muted)}
+.cta:empty{display:none}
 
 /* tools + certs */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
@@ -223,7 +228,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   <a class="brand" href="#top"><span class="mono" id="mono"></span><span id="navName"></span></a>
   <nav class="nav-links">
     <a href="#services">What I do</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
-    <a href="#videos">Videos</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
+    <a href="#videos">Solutions</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
     <button class="icon-btn" id="themeBtn" title="Switch light/dark" aria-label="Switch light or dark theme"><svg class="ico" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </nav>
 </div></header>
@@ -258,8 +263,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div></section>
 
   <section id="videos"><div class="wrap">
-    <div class="sec-head"><h2>Videos</h2></div>
+    <div class="sec-head"><h2>Solutions you can adopt</h2><p>Two working platforms, shown in short videos. Each can be set up for your organisation.</p></div>
     <div class="grid cols2" id="videoGrid"></div>
+    <div class="cta card" id="demoCta"></div>
   </div></section>
 
   <section id="tools"><div class="wrap">
@@ -759,18 +765,20 @@ const DEFAULT_DATA = {
  ],
  "videos": [
   {
-   "title": "Erada Digital Solutions",
-   "description": "Web apps, websites, Moodle, ODK tools and dashboards for NGOs and programmes.",
+   "title": "AI-Powered Capacity Building & Digital Learning Platform",
+   "description": "One secure platform for every step of a training programme, from scheduling and invitations to attendance and certificates, with AI that answers learners' questions. Already built and working; it can be set up, branded and adapted for your organisation or NGO.",
    "url": "https://youtu.be/QWV5-Vd4gak",
    "link": "https://eradadigital.com",
-   "link_label": "Visit Erada Digital Solutions"
+   "link_label": "See Erada Digital Solutions",
+   "tags": "Ready to adapt, For NGOs & programmes"
   },
   {
-   "title": "Erada Digital Learning – how the Moodle LMS works",
-   "description": "How the free Erada Learning Moodle platform works.",
+   "title": "Moodle learning platform (LMS)",
+   "description": "A 2-minute tour of Erada Learning, a live Moodle platform with step-by-step lessons and an end-of-module quiz with a pass mark. The same set-up can be built for your staff or field-worker training, with your courses and branding.",
    "url": "https://youtu.be/qBaylqFazK0",
    "link": "http://learn.eradadigital.com/",
-   "link_label": "Visit Erada Learning"
+   "link_label": "Try the live platform",
+   "tags": "Live now, Ready to adapt"
   }
  ]
 };
@@ -876,9 +884,12 @@ function render(D){
       : e.type === "video" ? `<video controls preload="metadata" src="${esc(e.src)}"></video>`
       : e.type === "iframe" ? `<iframe src="${esc(e.src)}" title="${esc(v.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`
       : `<a class="empty" href="${esc(v.url)}" target="_blank" rel="noopener">▶ Watch the video</a>`;
-    return `<div class="card vid"><div class="frame">${frame}</div><div class="body"><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p>
+    return `<div class="card vid"><div class="frame">${frame}</div><div class="body">${v.tags ? `<div class="chips" style="margin-bottom:7px">${list(v.tags).map(t => `<span class="chip ok">${esc(t)}</span>`).join("")}</div>` : ""}<h3>${esc(v.title)}</h3><p>${esc(v.description)}</p>
       ${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.link_label || "Visit")} →</a>` : ""}</div></div>`;
   }).join("");
+  const demo = P.email_2 || P.email;
+  $("demoCta").innerHTML = vids.length && demo ? `<div><b>Want one of these for your organisation?</b><span>Tell me what you need and I'll show you a demo and how it would fit your programme.</span></div>
+    <a class="btn primary" href="mailto:${esc(demo)}?subject=${encodeURIComponent("Demo request")}">${icon("mail")} Request a demo</a>` : "";
 
   $("toolsHead").innerHTML = `${icon("tool")} Key tools`;
   $("toolRows").innerHTML = (D.skills || []).map(s => `<div class="trow"><span class="lbl">${esc(s.group)}</span>${chips(s.items)}</div>`).join("");
