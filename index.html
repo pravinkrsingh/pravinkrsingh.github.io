@@ -308,7 +308,7 @@ const DEFAULT_DATA = {
   "name": "Pravin Kumar Singh",
   "headline": "IT Operations, Project Management & Digital Health Technology",
   "tagline": "IT Manager · 23 years in technology · 12 with I-TECH India on India's National AIDS Control Programme",
-  "summary": "I lead technology for development-sector programmes: running IT operations across offices, managing projects and vendors from ToR to handover, and building learning platforms, ODK field tools and automations. I work with NACO, NIC, MoHFW, SACS and PEPFAR/HRSA partners.",
+  "summary": "I help NGOs, public-health programmes and development organisations plan, build and manage technology that supports their everyday work. I combine IT operations, project and vendor management with hands-on system development: online training platforms, mobile data-collection tools, dashboards and automated reporting.",
   "open_to": "IT Operations & Management, Project Management, Digital Health roles, Consulting, Remote / Hybrid, Relocation across India",
   "status_badge": "Open to opportunities",
   "photo": "",
@@ -318,10 +318,10 @@ const DEFAULT_DATA = {
   "email_2": "info@eradadigital.com",
   "website": "https://eradadigital.com",
   "website_label": "Digital Solutions",
-  "learning_portal": "http://learn.eradadigital.com/",
+  "learning_portal": "https://learn.eradadigital.com/",
   "learning_portal_label": "Learning Management Portal (LMS)",
   "phone": "",
-  "linkedin": "",
+  "linkedin": "https://www.linkedin.com/in/pravink-singh",
   "github_user": "",
   "current_role": "IT Manager – Digital Platforms & Programme Technology",
   "current_org": "I-TECH India (University of Washington)",
@@ -349,7 +349,7 @@ const DEFAULT_DATA = {
    "org": "Erada Digital Solutions",
    "logo": "EDS",
    "note": "",
-   "bullets": "Started Erada Digital Solutions to offer LMS, web, ODK and automation work to NGOs and public-health programmes.\nLaunched Erada Learning, a free platform for foundational public-health courses (in development).\nScoped a bilingual Moodle LMS for a Delhi-area NGO."
+   "bullets": "Started Erada Digital Solutions to offer LMS, web, ODK and automation work to NGOs and public-health programmes.\nLaunched Erada Learning, a live, free learning platform with public-health courses; more courses are being added.\nScoped a bilingual Moodle LMS for a Delhi-area NGO."
   },
   {
    "start": "Nov 2012",
@@ -576,8 +576,8 @@ const DEFAULT_DATA = {
   {
    "group": "With partners",
    "name": "ARTMitr IVRS",
-   "badge": "13,000 PLHIV reached",
-   "description": "IVRS and SMS platform during COVID-19 that supported an 87% ART collection rate.",
+   "badge": "COVID-19 response",
+   "description": "Phone (IVRS) and SMS platform for people living with HIV during COVID-19. Coordinated requirements, UAT and rollout.",
    "tags": "IVRS, SMS",
    "link": "",
    "icon": "phone",
@@ -632,9 +632,9 @@ const DEFAULT_DATA = {
    "group": "Erada",
    "name": "Erada Learning",
    "badge": "Free",
-   "description": "Free learning platform; foundational courses in public health, digital health and programme management are being added.",
+   "description": "Live, free learning platform with public-health courses. Additional courses in public health, digital health and programme management are being added.",
    "tags": "Moodle, Articulate",
-   "link": "http://learn.eradadigital.com/",
+   "link": "https://learn.eradadigital.com/",
    "icon": "learning",
    "image": "",
    "featured": ""
@@ -774,9 +774,9 @@ const DEFAULT_DATA = {
   },
   {
    "title": "Moodle learning platform (LMS)",
-   "description": "A 2-minute tour of Erada Learning, a live Moodle platform with step-by-step lessons and an end-of-module quiz with a pass mark. The same set-up can be built for your staff or field-worker training, with your courses and branding.",
+   "description": "A 2-minute tour of Erada Learning, a live Moodle platform with step-by-step lessons and an end-of-module quiz with a pass mark. More courses are being added. The same set-up can be built for your staff or field-worker training, with your courses and branding.",
    "url": "https://youtu.be/qBaylqFazK0",
-   "link": "http://learn.eradadigital.com/",
+   "link": "https://learn.eradadigital.com/",
    "link_label": "Try the live platform",
    "tags": "Live now, Ready to adapt"
   }
@@ -806,6 +806,7 @@ const ICONS = {
   tool: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/>',
   award: '<circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/>',
   check: '<path d="m5 12 5 5 9-10"/>',
+  linkedin: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7h.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>',
   project: '<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M7 13h5M7 17h9"/>',
   proposal: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="m9 14 2 2 4-4"/>',
   ops: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/>'
@@ -841,7 +842,7 @@ function render(D){
 
   let a = "";
   if (P.email) a += `<a class="btn primary" href="mailto:${esc(P.email)}">${icon("mail")} Email me</a>`;
-  if (P.linkedin) a += ext(P.linkedin, "LinkedIn");
+  if (P.linkedin) a += ext(P.linkedin, `${icon("linkedin")} LinkedIn`);
   if (P.github_user) a += ext(`https://github.com/${P.github_user}`, "GitHub");
   a += `<button class="btn" onclick="window.print()">${icon("down")} Save as PDF</button>`;
   $("actions").innerHTML = a;
@@ -906,6 +907,7 @@ function render(D){
   let c = "";
   if (P.email) c += `<a href="mailto:${esc(P.email)}">${icon("mail")} ${esc(P.email)}</a>`;
   if (P.email_2) c += `<a href="mailto:${esc(P.email_2)}">${icon("mail")} ${esc(P.email_2)}</a>`;
+  if (P.linkedin) c += ext(P.linkedin, `${icon("linkedin")} ${esc(P.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))}`, "");
   const dom = u => esc(String(u).replace(/^https?:\/\//, "").replace(/\/$/, ""));
   let sites = "";
   if (P.website) sites += `<a class="site" href="${esc(P.website)}" target="_blank" rel="noopener"><span class="ib">${icon("globe")}</span><span><b>${esc(P.website_label || "Website")}</b><span>${dom(P.website)}</span></span></a>`;
