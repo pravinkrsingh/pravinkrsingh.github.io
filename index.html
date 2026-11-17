@@ -125,6 +125,7 @@ h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--a
 .job .note{font-size:12.5px;color:var(--muted)}
 .job ul{margin:8px 0 0;padding-left:17px}
 .job li{margin:3px 0;font-size:13.5px}
+.job li b{color:var(--accent-2);font-weight:600}
 .job li::marker{color:var(--accent)}
 .job li.more{display:none}
 .job.open li.more{display:list-item}
@@ -223,7 +224,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div></section>
 
   <section id="experience"><div class="wrap">
-    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="sec-head"><h2>Experience</h2><p>Earlier roles are summarised; open "Show more" for detail.</p></div>
     <div class="tl" id="jobs"></div>
   </div></section>
 
@@ -269,10 +270,10 @@ const SHEET_API = "";
 const DEFAULT_DATA = {
  "profile": {
   "name": "Pravin Kumar Singh",
-  "headline": "Digital Health & Learning Technology Specialist",
-  "tagline": "23 years in technology · 12 on India's National AIDS Control Programme",
-  "summary": "I build and run the systems public-health programmes use every day: learning platforms, web portals, ODK field tools and automated reports. I also manage vendor delivery, UAT and rollout for mobile and AI-enabled apps with NACO, NIC, SACS and PEPFAR/HRSA partners.",
-  "open_to": "Senior technical roles, Consulting, Remote / Hybrid, Relocation across India",
+  "headline": "IT Operations, Project Management & Digital Health Technology",
+  "tagline": "IT Manager · 23 years in technology · 12 with I-TECH India on India's National AIDS Control Programme",
+  "summary": "I lead technology for development-sector programmes: running IT operations across offices, managing projects and vendors from ToR to handover, and building learning platforms, ODK field tools and automations. I work with NACO, NIC, MoHFW, SACS and PEPFAR/HRSA partners.",
+  "open_to": "IT Operations & Management, Project Management, Digital Health roles, Consulting, Remote / Hybrid, Relocation across India",
   "status_badge": "Open to opportunities",
   "photo": "",
   "location": "New Delhi, India",
@@ -301,7 +302,7 @@ const DEFAULT_DATA = {
    "org": "I-TECH India (University of Washington)",
    "logo": "UW",
    "note": "Consultant since April 2026",
-   "bullets": "Technology lead for NACP digital work with NACO, NIC, SACS, MoHFW and PEPFAR/HRSA partners, from requirements to rollout.\nBuilt a distance-learning platform with Google Gemini AI integration and ran 500+ national and regional training sessions.\nDesigned ODK supervision tools used across 130+ ART Centres; now building one integrated ODK app for all supervision checklists.\nWorked on AI chatbots for the National Guidelines for HIV Care and Treatment, and an ART Centre finder.\nManaged vendor delivery and UAT for the HIV Treatment Guidelines app, SAMVAAD and paperless ART action plans.\nSet up and run Moodle and Canvas LMS for national training programmes.\nKept IT running across head office and state offices with 98%+ uptime; moved the organisation to Google Workspace.\nWrote ToRs, IT policies, SOPs, UAT documents and user guides; managed AMCs, SLAs and IT assets.\nLed I-TECH India's 2026 technical proposal for a Bengali primary-teacher learning platform in West Bengal."
+   "bullets": "Programme technology: Technology lead for I-TECH India's NACP work under PEPFAR/HRSA, working with NACO, NIC, MoHFW and SACS from requirements to rollout.\nProject & vendor management: Managed vendor-delivered projects from scope to handover (ToRs, vendor selection, contracts, UAT and government acceptance), including the HIV Treatment Guidelines app, SAMVAAD and the MAS digital modules.\nIT operations: Run IT across head office and state offices with 98%+ uptime: user support, servers, network, security, backups, AMCs/SLAs and IT assets. Moved the organisation to Google Workspace.\nTraining delivery: Led technical delivery of 1,000+ national and regional distance-learning sessions since 2014.\nField data: Led design, field testing and rollout of vendor-built ODK supervision tools across 180+ ART Centres; built further ODK checklists myself and am now building one integrated ODK app.\nDigital learning platform: Built a platform with Google Gemini AI integration, now demonstrated in public health for wider adoption.\nAI: Piloted an AI agent for the National Guidelines for HIV Care and Treatment, with an ART Centre finder.\nLMS: Implemented and manage Moodle and Canvas for national training programmes.\nAdministration & events: IT procurement, logistics and AV for workshops and national meetings, and 10–12 NACO review meetings a month (set-up, recordings and minutes).\nDocumentation: Wrote ToRs, IT policies, SOPs, disaster-recovery plans, UAT documents and user guides; built staff capacity on digital tools and cyber safety.\nProposals: Led I-TECH India's 2026 technical proposal for a Bengali primary-teacher learning platform in West Bengal."
   },
   {
    "start": "2026",
@@ -311,7 +312,7 @@ const DEFAULT_DATA = {
    "org": "Erada Digital Solutions",
    "logo": "EDS",
    "note": "",
-   "bullets": "Started Erada Digital Solutions to deliver LMS, web, ODK and automation work for NGOs and public-health programmes.\nLaunched Erada Learning, a free platform with foundational public-health courses.\nScoped a bilingual Moodle LMS for a Delhi-area NGO."
+   "bullets": "Started Erada Digital Solutions to offer LMS, web, ODK and automation work to NGOs and public-health programmes.\nLaunched Erada Learning, a free platform for foundational public-health courses (in development).\nScoped a bilingual Moodle LMS for a Delhi-area NGO."
   },
   {
    "start": "Nov 2012",
@@ -346,6 +347,21 @@ const DEFAULT_DATA = {
  ],
  "services": [
   {
+   "icon": "project",
+   "title": "Project & vendor management",
+   "text": "ToRs, vendor selection, timelines, UAT and rollout, through to handover."
+  },
+  {
+   "icon": "ops",
+   "title": "IT operations & management",
+   "text": "Multi-location office IT: support, assets, AMCs/SLAs, backups and 98%+ uptime."
+  },
+  {
+   "icon": "proposal",
+   "title": "RFP responses & proposals",
+   "text": "Technical proposals with solution design, delivery and UAT plans, and demo builds."
+  },
+  {
    "icon": "learning",
    "title": "Learning platforms",
    "text": "Moodle and Canvas setup, live sessions and certificates."
@@ -372,14 +388,14 @@ const DEFAULT_DATA = {
   },
   {
    "icon": "infra",
-   "title": "Infrastructure & security",
-   "text": "Cloud hosting, networks, Workspace admin and security audits."
+   "title": "Cloud & security",
+   "text": "Cloud hosting, networks, Workspace admin and security audit coordination."
   }
  ],
  "projects": [
   {
    "group": "Built by me",
-   "name": "Distance Learning Platform",
+   "name": "Digital Learning Platform",
    "badge": "AI-integrated",
    "description": "Google Gemini answers learner questions inside a platform for scheduling, alerts, attendance and QR certificates. Demonstrated in public health for wider adoption.",
    "tags": "PHP 8.3, MySQL, Google Gemini API, SMS & WhatsApp APIs, Zoom OAuth, 2FA",
@@ -401,25 +417,25 @@ const DEFAULT_DATA = {
   },
   {
    "group": "Built by me",
-   "name": "ODK Supervision Suite",
-   "badge": "130+ ART Centres",
-   "description": "Scored supervision checklists for ART, CSC, ART Plus/SACEP, SSS, ICTC and SSK.",
-   "tags": "ODK Central, KoboToolbox, XLSForm, Power BI",
+   "name": "AI Agent Pilot",
+   "badge": "Pilot",
+   "description": "Low-code AI agent that answers Medical Officers' questions from the National Guidelines for HIV Care and Treatment, and finds ART Centres with map directions.",
+   "tags": "DigitalOcean Gradient, RAG",
    "link": "",
-   "icon": "data",
+   "icon": "ai",
    "image": "",
    "featured": "yes"
   },
   {
    "group": "Built by me",
-   "name": "HIV Guidelines AI Chatbots",
-   "badge": "AI",
-   "description": "Chatbots that answer Medical Officers' questions from the National Guidelines for HIV Care and Treatment, plus an ART Centre finder with map directions.",
-   "tags": "DigitalOcean Gradient, Azure, RAG",
+   "name": "ODK Supervision Checklists",
+   "badge": "",
+   "description": "Checklists I built in ODK Central for ART Plus/SACEP, ICTC, SSK, SSS readiness and DSRC, with scoring and cascading facility lists.",
+   "tags": "ODK Central, XLSForm, DigitalOcean",
    "link": "",
-   "icon": "ai",
+   "icon": "data",
    "image": "",
-   "featured": "yes"
+   "featured": ""
   },
   {
    "group": "Built by me",
@@ -435,9 +451,9 @@ const DEFAULT_DATA = {
   {
    "group": "Built by me",
    "name": "Strategic Information e-Learning",
-   "badge": "",
-   "description": "Moodle course for State and District SI Officers under NACP.",
-   "tags": "Moodle, Articulate Rise, SCORM, DigitalOcean",
+   "badge": "In progress",
+   "description": "Co-developed a Moodle course for State and District SI Officers under NACP, on a server I set up and run.",
+   "tags": "Moodle, Articulate Rise, DigitalOcean",
    "link": "",
    "icon": "learning",
    "image": "",
@@ -458,7 +474,7 @@ const DEFAULT_DATA = {
    "group": "Built by me",
    "name": "Training Data Tool",
    "badge": "",
-   "description": "Excel VBA tool that compiles and cleans national training session data.",
+   "description": "Excel VBA tool that compiles and cleans national and regional training session data.",
    "tags": "Excel, VBA",
    "link": "",
    "icon": "chart",
@@ -467,10 +483,21 @@ const DEFAULT_DATA = {
   },
   {
    "group": "With partners",
+   "name": "ART Performance & CSC Tools",
+   "badge": "180+ ART Centres",
+   "description": "Vendor-built ODK supervision tools with automated action plans and Power BI dashboards. I led design, field testing, rollout and user guides.",
+   "tags": "ODK Central, Power BI",
+   "link": "",
+   "icon": "data",
+   "image": "",
+   "featured": "yes"
+  },
+  {
+   "group": "With partners",
    "name": "HIV Treatment Guidelines App",
    "badge": "1,600+ downloads",
-   "description": "Offline Android reference to a 556-page clinical guideline, from ToR to Play Store.",
-   "tags": "Android, Google Play, Security audit (VAPT)",
+   "description": "Offline Android reference to a 556-page clinical guideline. Technical Manager from ToR and vendor selection to Play Store.",
+   "tags": "Android, Google Play, Security audit",
    "link": "https://treatandcareguide.naco.gov.in",
    "icon": "mobile",
    "image": "",
@@ -479,8 +506,8 @@ const DEFAULT_DATA = {
   {
    "group": "With partners",
    "name": "SAMVAAD AI Counselling App",
-   "badge": "32,000+ sessions",
-   "description": "Tablet counselling app with 8 modules on 13 HIV themes, handed over to states.",
+   "badge": "Handed over to states",
+   "description": "AI-enabled tablet app with 8 counselling modules on 13 HIV themes, used for 32,000+ sessions. Coordinated requirements, UAT and the handover to state health authorities.",
    "tags": "Android tablet, AI",
    "link": "",
    "icon": "ai",
@@ -502,7 +529,7 @@ const DEFAULT_DATA = {
    "group": "With partners",
    "name": "SOCH Conversational AI",
    "badge": "",
-   "description": "Chatbot for programme managers to query national data in plain language.",
+   "description": "Chatbot for programme managers to query national data in plain language. Defined requirements and ran UAT.",
    "tags": "Conversational AI, RBAC",
    "link": "",
    "icon": "ai",
@@ -513,7 +540,7 @@ const DEFAULT_DATA = {
    "group": "With partners",
    "name": "ARTMitr IVRS",
    "badge": "13,000 PLHIV reached",
-   "description": "IVRS and SMS reminders during COVID-19, with an 87% ART collection rate.",
+   "description": "IVRS and SMS platform during COVID-19 that supported an 87% ART collection rate.",
    "tags": "IVRS, SMS",
    "link": "",
    "icon": "phone",
@@ -524,7 +551,7 @@ const DEFAULT_DATA = {
    "group": "With partners",
    "name": "Nirantar Teleconsultation",
    "badge": "",
-   "description": "Virtual consultations, messaging and e-prescriptions for HIV clinicians.",
+   "description": "Virtual consultations, messaging and e-prescriptions for HIV clinicians. Supported requirements, testing and rollout.",
    "tags": "Cloud platform, e-Prescription",
    "link": "",
    "icon": "health",
@@ -535,7 +562,7 @@ const DEFAULT_DATA = {
    "group": "With partners",
    "name": "MAS Digital Modules",
    "badge": "Rolled out",
-   "description": "QR-based ICTC self-registration and a digital contact directory.",
+   "description": "QR-based ICTC self-registration and a digital contact directory, from scope to government acceptance.",
    "tags": "QR codes, Web app",
    "link": "",
    "icon": "web",
@@ -558,7 +585,7 @@ const DEFAULT_DATA = {
    "name": "Erada Digital Solutions",
    "badge": "Founded 2026",
    "description": "Web apps, websites, Moodle LMS, ODK tools and dashboards for NGOs and programmes.",
-   "tags": "WordPress, Moodle, ODK, PHP",
+   "tags": "",
    "link": "https://eradadigital.com",
    "icon": "web",
    "image": "",
@@ -568,7 +595,7 @@ const DEFAULT_DATA = {
    "group": "Erada",
    "name": "Erada Learning",
    "badge": "Free",
-   "description": "Free courses in public health, digital health and programme management.",
+   "description": "Free learning platform; foundational courses in public health, digital health and programme management are being added.",
    "tags": "Moodle, Articulate",
    "link": "http://learn.eradadigital.com/",
    "icon": "learning",
@@ -579,15 +606,15 @@ const DEFAULT_DATA = {
  "skills": [
   {
    "group": "Learning",
-   "items": "Moodle, Canvas, Zoom"
+   "items": "Moodle, Canvas, Articulate Rise, Zoom, Adobe Connect"
   },
   {
    "group": "Data",
-   "items": "ODK Central, KoboToolbox, Power BI, Tableau, Excel VBA"
+   "items": "ODK Central, KoboToolbox, XLSForm, Power BI, Tableau, Excel VBA"
   },
   {
    "group": "Build",
-   "items": "PHP, MySQL, JavaScript, WordPress, Apps Script"
+   "items": "PHP, MySQL, SQL, JavaScript, WordPress, Apps Script, REST APIs"
   },
   {
    "group": "AI",
@@ -595,7 +622,15 @@ const DEFAULT_DATA = {
   },
   {
    "group": "Cloud & IT",
-   "items": "AWS, Azure, DigitalOcean, NIC NGC Cloud, Google Workspace, Microsoft 365, Cisco ASA, SonicWALL"
+   "items": "AWS, Azure, DigitalOcean, NIC NGC Cloud, Linux, Google Workspace, Microsoft 365"
+  },
+  {
+   "group": "Security",
+   "items": "VAPT / Nessus audits, 2FA & RBAC, Active Directory, Cisco ASA, SonicWALL, Backup & DR"
+  },
+  {
+   "group": "Delivery",
+   "items": "BRD / SRS, UAT, Vendor & AMC / SLA management, SOPs & training, SMS & IVRS platforms, Mailchimp"
   }
  ],
  "education": [
@@ -607,7 +642,7 @@ const DEFAULT_DATA = {
  ],
  "certifications": [
   {
-   "title": "IT Project & Program Management",
+   "title": "Strategic Applications of IT Project & Program Management",
    "issuer": "University of Washington",
    "date": "",
    "logo": "UW"
@@ -631,37 +666,37 @@ const DEFAULT_DATA = {
    "logo": "NIELIT"
   },
   {
-   "title": "Machine Learning for Cyber Security",
+   "title": "Bootcamp on Machine Learning for Cyber Security",
    "issuer": "CDAC",
    "date": "",
    "logo": "CDAC"
   },
   {
-   "title": "Geodata Processing with Python & ML",
+   "title": "Geodata Processing using Python and Machine Learning",
    "issuer": "ISRO",
    "date": "",
    "logo": "ISRO"
   },
   {
-   "title": "Monitoring & Evaluation in Global Health",
+   "title": "Monitoring and Evaluation in Global Health",
    "issuer": "University of Washington",
    "date": "",
    "logo": "UW"
   },
   {
-   "title": "Transforming Your Leadership & Management Skills",
+   "title": "Transforming Your Leadership and Management Skills",
    "issuer": "University of Washington",
    "date": "",
    "logo": "UW"
   },
   {
-   "title": "KoboToolbox for Beginners",
+   "title": "Kobo Toolbox for Beginners",
    "issuer": "Data for Development",
    "date": "",
    "logo": "D4D"
   },
   {
-   "title": "Data Visualisation",
+   "title": "Data Visualization",
    "issuer": "Coursera / Global Health eLearning",
    "date": "",
    "logo": "C"
@@ -731,7 +766,10 @@ const ICONS = {
   lang: '<path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"/><path d="m13 21 4-9 4 9M14.5 18h5"/>',
   tool: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/>',
   award: '<circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/>',
-  check: '<path d="m5 12 5 5 9-10"/>'
+  check: '<path d="m5 12 5 5 9-10"/>',
+  project: '<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M7 13h5M7 17h9"/>',
+  proposal: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="m9 14 2 2 4-4"/>',
+  ops: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/>'
 };
 const icon = n => `<svg class="ico" viewBox="0 0 24 24">${ICONS[n] || ICONS.web}</svg>`;
 
@@ -741,6 +779,7 @@ const list = s => String(s || "").split(",").map(x => x.trim()).filter(Boolean);
 const chips = s => `<div class="chips">${list(s).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>`;
 const isImg = s => /\.(png|jpe?g|webp|gif|svg)(\?|$)/i.test(String(s || "")) || /^https?:\/\//.test(String(s || ""));
 const initials = s => String(s || "").replace(/\(.*?\)/g, "").split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+const lbl = x => { const m = String(x).match(/^([^:]{2,32}):\s([A-Z0-9].+)$/); return m ? `<b>${esc(m[1])}:</b> ${esc(m[2])}` : esc(x); };
 const ext = (url, label, cls = "btn") => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${label}</a>`;
 
 let DATA = null, TAB = "Highlights", SHOW_ALL = false;
@@ -787,13 +826,14 @@ function render(D){
 
   $("jobs").innerHTML = (D.experience || []).map((j, i) => {
     const b = String(j.bullets || "").split("\n").map(x => x.trim()).filter(Boolean);
+    const vis = i === 0 ? 6 : /present/i.test(j.end) ? 99 : 1;
     const when = [j.start, j.end].filter(Boolean).join(" – ") + (j.location ? ` · ${j.location}` : "");
     const logo = j.logo && isImg(j.logo) ? `<img src="${esc(j.logo)}" alt="">` : esc(j.logo || initials(j.org));
     return `<div class="job" id="job${i}"><div class="logo">${logo}</div><div class="card">
       <div class="top"><div><h3>${esc(j.role || j.org)}</h3>${j.role ? `<div class="org">${esc(j.org)}${j.note ? ` <span class="note">· ${esc(j.note)}</span>` : ""}</div>` : ""}</div>
       <span class="when">${esc(when)}</span></div>
-      ${b.length ? `<ul>${b.map((x, k) => `<li${k >= 5 ? ' class="more"' : ""}>${esc(x)}</li>`).join("")}</ul>` : ""}
-      ${b.length > 5 ? `<button class="linkbtn" style="margin-top:6px" onclick="toggleJob(${i},this)">Show ${b.length - 5} more</button>` : ""}</div></div>`;
+      ${b.length ? `<ul>${b.map((x, k) => `<li${k >= vis ? ' class="more"' : ""}>${lbl(x)}</li>`).join("")}</ul>` : ""}
+      ${b.length > vis ? `<button class="linkbtn" style="margin-top:6px" onclick="toggleJob(${i},this)">Show ${b.length - vis} more</button>` : ""}</div></div>`;
   }).join("");
 
   const vids = D.videos || [];
