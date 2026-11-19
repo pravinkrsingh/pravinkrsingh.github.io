@@ -3,13 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pravin Kumar Singh · IT Operations, Project Management & Digital Health Technology</title>
-<meta name="description" content="IT Manager with 23 years in technology, 12 with I-TECH India on India's National AIDS Control Programme. IT operations, project and vendor management, learning platforms, ODK field tools and AI-enabled programme technology.">
+<title>Pravin Kumar Singh – IT Manager | IT Operations, Project Management &amp; Digital Health | New Delhi</title>
+<meta name="description" content="New Delhi IT Manager with 23 years in technology, 12 on India's National AIDS Control Programme. IT operations, project management, Moodle LMS, ODK and digital health for NGOs.">
 <link rel="canonical" href="https://pravin.eradadigital.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#2E5FA3">
+<meta name="author" content="Pravin Kumar Singh">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="Pravin Kumar Singh, IT Manager, IT Operations, Project Management, Vendor Management, Digital Health, Public Health, NGO, Development Sector, NACO, National AIDS Control Programme, I-TECH India, Moodle, LMS, ODK, KoboToolbox, Power BI, New Delhi">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://pravin.eradadigital.com/",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Pravin Kumar Singh",
+    "jobTitle": "IT Manager – Digital Platforms & Programme Technology",
+    "description": "IT Manager with 23 years in technology, including 12 years supporting India's National AIDS Control Programme through I-TECH India. IT operations, project and vendor management, learning platforms, ODK data collection and digital health.",
+    "url": "https://pravin.eradadigital.com/",
+    "image": "https://pravin.eradadigital.com/og-image.jpg",
+    "email": "mailto:pravin0103@hotmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "New Delhi", "addressCountry": "IN"},
+    "worksFor": [
+      {"@type": "Organization", "name": "I-TECH India"},
+      {"@type": "Organization", "name": "Erada Digital Solutions", "url": "https://eradadigital.com"}
+    ],
+    "knowsLanguage": ["Hindi", "English", "Marathi"],
+    "knowsAbout": ["IT Operations", "IT Management", "Project Management", "Vendor Management", "Digital Health", "Public Health Programmes", "Learning Management Systems", "Moodle", "ODK", "KoboToolbox", "Power BI", "Google Apps Script", "Cloud Hosting", "Information Security"],
+    "sameAs": ["https://www.linkedin.com/in/pravink-singh"]
+  }
+}
+</script>
 <!-- Link previews (WhatsApp, LinkedIn, Facebook, X) -->
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Pravin Kumar Singh">
@@ -135,6 +162,9 @@ h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--a
 .proj .foot{margin-top:10px;display:flex;justify-content:flex-end}
 .proj .foot a{font-size:12.5px;font-weight:600;text-decoration:none;white-space:nowrap}
 .center{text-align:center;margin-top:16px}
+.proj.hide{display:none}
+.proj .grp{display:none}
+.print-head{display:none}
 
 /* experience timeline */
 .tl{position:relative;display:grid;gap:12px}
@@ -213,67 +243,258 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .cols2,.cols3{grid-template-columns:1fr} form{grid-template-columns:1fr}
   .job{grid-template-columns:1fr} .logo{display:none}
 }
+@page{size:A4;margin:13mm 13mm 14mm}
 @media print{
-  :root{--bg:#fff;--card:#fff;--shadow:none}
-  header.nav,.actions,#contact,#videos,.icon-btn,.tabs,.linkbtn,.thumb{display:none!important}
-  body{font-size:11.5px} .hero{padding:6px 0;background:none} section{padding:12px 0}
-  .card{break-inside:avoid;box-shadow:none} .proj{display:flex!important}
-  .job li.more,.certs li.more{display:list-item!important} .certs li.more{display:flex!important}
+  :root{--bg:#fff;--card:#fff;--shadow:none;--line:#D5DEEA}
+  html,body{background:#fff!important;color:#17243A}
+  body{font-size:10.5px;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  header.nav,.actions,.pcard,.badge,#videos,#contact,.icon-btn,.tabs,.linkbtn,.thumb,.proj .foot,#certMore,.sec-head p,footer{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .card{box-shadow:none!important;transform:none!important;border-color:#D5DEEA;padding:8px 10px;border-radius:8px}
   a{color:inherit;text-decoration:none}
+  /* header */
+  .print-head{display:flex!important;justify-content:space-between;gap:16px;border-bottom:2px solid #2E5FA3;padding-bottom:8px;margin-bottom:8px}
+  .print-head .pn{font-size:22px;font-weight:800;color:#17243A;letter-spacing:-.3px}
+  .print-head .pt{font-size:12px;font-weight:600;color:#2E5FA3;margin-top:1px}
+  .print-head .ps{font-size:10px;color:#5A6880;margin-top:2px}
+  .print-head .pc{text-align:right;font-size:9.5px;color:#17243A;line-height:1.5;white-space:nowrap}
+  .hero{padding:0 0 6px;background:none}
+  .hero-grid{display:block}
+  .hero h1,.hero .headline,.hero .tagline{display:none}
+  .summary{font-size:11px;max-width:none;margin:0 0 6px}
+  .open{font-size:9.5px} .open .chip{padding:1px 7px;font-size:9.5px}
+  /* sections */
+  section{padding:8px 0 4px;border-top:0}
+  .sec-head{margin-bottom:6px}
+  h2{font-size:13.5px;color:#1F4A86;break-after:avoid;page-break-after:avoid}
+  h2::before{height:13px}
+  .grid{gap:6px}
+  .chip{font-size:8.5px;padding:1px 6px}
+  /* what I do */
+  #services .cols3{grid-template-columns:repeat(3,1fr)}
+  .svc{gap:7px} .svc .ib{width:24px;height:24px;border-radius:6px} .svc .ib .ico{width:13px;height:13px}
+  .svc h3{font-size:10.5px;margin:0} .svc p{font-size:9.5px}
+  /* projects: all, compact */
+  #projects .cols3{grid-template-columns:repeat(2,1fr)}
+  .proj,.proj.hide{display:block!important;break-inside:avoid;page-break-inside:avoid}
+  .proj .body{padding:0}
+  .proj .grp{display:block!important;font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;color:#2E8B57;font-weight:700;margin-bottom:1px}
+  .proj h3{font-size:11px;margin:0 0 1px} .proj p{font-size:9.5px;margin:0 0 3px}
+  .proj .bw{display:inline;font-size:8px;margin-right:4px} .proj .chips{display:inline-flex}
+  /* experience */
+  .tl{gap:6px} .job{grid-template-columns:30px 1fr;gap:8px}
+  .logo{width:30px;height:30px;border-radius:7px;font-size:9px;box-shadow:none}
+  .job .card{break-inside:auto} .job h3{font-size:11.5px} .job .org{font-size:10.5px}
+  .when{font-size:9.5px;padding:1px 7px}
+  .job ul{margin-top:4px} .job li{font-size:10px;margin:1px 0;break-inside:avoid}
+  .job li.more{display:list-item!important}
+  /* tools + certs */
+  .split{grid-template-columns:1.15fr 1fr;gap:8px}
+  .card h4{font-size:11px;margin-bottom:4px}
+  .trow{grid-template-columns:78px 1fr;gap:6px;padding:2px 0}
+  .trow .lbl{font-size:8.5px}
+  .certs li,.certs li.more{display:flex!important;padding:3px 0}
+  .certs .org{width:30px;height:20px;font-size:7.5px;border-radius:5px}
+  .certs .t{font-size:9.5px} .certs .small{font-size:8.5px}
+  .edu{font-size:9.5px;margin-top:5px}
+  /* CV order: summary, experience, what I do, projects, tools */
+  main{display:flex;flex-direction:column}
+  main>.hero{order:1} #experience{order:2} #services{order:3} #projects{order:4} #tools{order:5}
+  /* project tools as plain inline text */
+  .proj .chips{display:inline;gap:0}
+  .proj .chip{background:none!important;padding:0;border-radius:0;font-size:9px;color:#5A6880}
+  .proj .chip:not(:last-child)::after{content:", "}
+  .proj .bw::after{content:":"}
+  .proj .bw{margin:0 3px 0 0;font-size:8.5px}
+  .proj{padding:6px 9px!important}
+  #tools .card{break-inside:avoid}
 }
 </style>
 </head>
 <body>
+<!--PR:start-->
+<div class="print-head" id="printHead"><div><div class="pn">Pravin Kumar Singh</div><div class="pt">IT Operations, Project Management &amp; Digital Health Technology</div><div class="ps">IT Manager · 23 years in technology · 12 with I-TECH India on India's National AIDS Control Programme</div></div>
+    <div class="pc"><div>New Delhi, India</div><div>pravin0103@hotmail.com</div><div>info@eradadigital.com</div><div>linkedin.com/in/pravink-singh</div><div>pravin.eradadigital.com</div></div></div>
 <header class="nav"><div class="wrap">
-  <a class="brand" href="#top"><span class="mono" id="mono"></span><span id="navName"></span></a>
+  <a class="brand" href="#top"><span class="mono" id="mono">PK</span><span id="navName">Pravin Kumar Singh</span></a>
   <nav class="nav-links">
     <a href="#services">What I do</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
     <a href="#videos">Solutions</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
-    <button class="icon-btn" id="themeBtn" title="Switch light/dark" aria-label="Switch light or dark theme"><svg class="ico" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="themeBtn" title="Switch light/dark" aria-label="Switch light or dark theme"><svg class="ico" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
   </nav>
 </div></header>
-
 <main id="top">
   <div class="hero"><div class="wrap hero-grid">
     <div>
-      <span class="badge" id="statusBadge"></span>
-      <h1 id="heroName"></h1>
-      <p class="headline" id="headline"></p>
-      <p class="tagline" id="tagline"></p>
-      <p class="summary" id="summary"></p>
-      <div class="open" id="openTo"></div>
-      <div class="actions" id="actions"></div>
+      <span class="badge" id="statusBadge">Open to opportunities</span>
+      <h1 id="heroName">Pravin Kumar <span>Singh</span></h1>
+      <p class="headline" id="headline">IT Operations, Project Management &amp; Digital Health Technology</p>
+      <p class="tagline" id="tagline">IT Manager · 23 years in technology · 12 with I-TECH India on India's National AIDS Control Programme</p>
+      <p class="summary" id="summary">I help NGOs, public-health programmes and development organisations plan, build and manage technology that supports their everyday work. I combine IT operations, project and vendor management with hands-on system development: online training platforms, mobile data-collection tools, dashboards and automated reporting.</p>
+      <div class="open" id="openTo"><b>Open to</b><span class="chip">IT Operations &amp; Management</span><span class="chip">Project Management</span><span class="chip">Digital Health roles</span><span class="chip">Consulting</span><span class="chip">Remote / Hybrid</span><span class="chip">Relocation across India</span></div>
+      <div class="actions" id="actions"><a class="btn primary" href="mailto:pravin0103@hotmail.com"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg> Email me</a><a class="btn" href="https://www.linkedin.com/in/pravink-singh" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7h.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg> LinkedIn</a><button class="btn" onclick="window.print()"><svg class="ico" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg> Save as PDF</button></div>
     </div>
-    <div class="card pcard" id="pcard"></div>
+    <div class="card pcard" id="pcard"><div class="band"></div><div class="avatar"><svg viewBox="0 0 24 24" class="sil"><circle cx="12" cy="9" r="4.2"></circle><path d="M3.8 21.5c.9-4.4 4.2-6.8 8.2-6.8s7.3 2.4 8.2 6.8"></path></svg></div><div class="body">
+    <div class="kicker">● Currently</div><h3>IT Manager – Digital Platforms &amp; Programme Technology</h3>
+    <div class="small">I-TECH India (University of Washington)</div><div class="small">Since 2014 · Consultant since Apr 2026</div>
+    <div class="facts">
+      <div><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>New Delhi, India</div>
+      <div><svg class="ico" viewBox="0 0 24 24"><path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M11 5c-1 4-4 7-7 8"></path><path d="m13 21 4-9 4 9M14.5 18h5"></path></svg>Hindi, English, Marathi</div>
+      <div><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><a href="mailto:pravin0103@hotmail.com">pravin0103@hotmail.com</a></div>
+      <div><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><a href="mailto:info@eradadigital.com">info@eradadigital.com</a></div>
+      
+    </div></div></div>
   </div></div>
 
   <section id="services"><div class="wrap">
     <div class="sec-head"><h2>What I do</h2></div>
-    <div class="grid cols3" id="svcGrid"></div>
+    <div class="grid cols3" id="svcGrid"><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path><path d="M7 13h5M7 17h9"></path></svg></div><div><h3>Project &amp; vendor management</h3><p>ToRs, vendor selection, timelines, UAT and rollout, through to handover.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"></path></svg></div><div><h3>IT operations &amp; management</h3><p>Multi-location office IT: support, assets, maintenance contracts, backups and 98%+ uptime.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="m9 14 2 2 4-4"></path></svg></div><div><h3>RFP responses &amp; proposals</h3><p>Technical proposals with solution design, delivery and UAT plans, and demo builds.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg></div><div><h3>Learning platforms</h3><p>Moodle and Canvas setup, live sessions and certificates.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4h6v3H9z"></path><path d="m9 14 2 2 4-4"></path></svg></div><div><h3>Field data tools</h3><p>Offline ODK and KoboToolbox forms with scoring and logic.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M7 6.5h.01M10 6.5h.01"></path></svg></div><div><h3>Web applications</h3><p>PHP/MySQL portals with logins, alerts and dashboards.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5.3L4 16"></path><path d="M4 20v-4h4"></path></svg></div><div><h3>Automation &amp; dashboards</h3><p>Apps Script, VBA and Power BI that turn data into reports.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"></path><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path></svg></div><div><h3>AI-enabled tools</h3><p>Gemini integration, guideline chatbots and AI app testing.</p></div></div><div class="card svc lift">
+    <div class="ib"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="7" rx="1.5"></rect><rect x="4" y="13" width="16" height="7" rx="1.5"></rect><path d="M8 7.5h.01M8 16.5h.01"></path></svg></div><div><h3>Cloud &amp; security</h3><p>Cloud hosting, networks, Workspace admin and security audit coordination.</p></div></div></div>
   </div></section>
 
   <section id="projects"><div class="wrap">
-    <div class="sec-head"><h2>Projects</h2><div class="tabs" id="tabs"></div></div>
-    <div class="grid cols3" id="projGrid"></div>
+    <div class="sec-head"><h2>Projects</h2><div class="tabs" id="tabs"><button class="tab on" onclick="setTab('Highlights')">Highlights<span>6</span></button><button class="tab" onclick="setTab('Built by me')">Built by me<span>8</span></button><button class="tab" onclick="setTab('With partners')">With partners<span>9</span></button><button class="tab" onclick="setTab('Erada')">Erada<span>2</span></button><button class="tab" onclick="setTab('All')">All<span>19</span></button></div></div>
+    <div class="grid cols3" id="projGrid"><div class="card proj lift">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"></path><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path></svg></div>
+      <span class="tag">AI-integrated</span></div>
+    <div class="body"><div class="grp">Built by me · AI-integrated</div><h3>Digital Learning Platform</h3><p>Google Gemini answers learner questions inside a platform for scheduling, alerts, attendance and QR certificates. Demonstrated in public health for wider adoption.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">PHP 8.3</span><span class="chip">MySQL</span><span class="chip">Google Gemini API</span><span class="chip">SMS &amp; WhatsApp APIs</span><span class="chip">Zoom OAuth</span><span class="chip">2FA</span></div></div></div><div class="card proj lift">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4h6v3H9z"></path><path d="m9 14 2 2 4-4"></path></svg></div>
+      <span class="tag">In progress</span></div>
+    <div class="body"><div class="grp">Built by me · In progress</div><h3>Integrated ODK Supervision App</h3><p>All supportive supervision checklists in one ODK form; the visiting team picks the right checklist for each visit.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">ODK Central</span><span class="chip">XLSForm</span><span class="chip">DigitalOcean</span></div></div></div><div class="card proj lift">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"></path><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path></svg></div>
+      <span class="tag">Pilot</span></div>
+    <div class="body"><div class="grp">Built by me · Pilot</div><h3>AI Agent Pilot</h3><p>Low-code AI agent that answers Medical Officers' questions from the National Guidelines for HIV Care and Treatment, and finds ART Centres with map directions.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">DigitalOcean Gradient</span><span class="chip">RAG</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4h6v3H9z"></path><path d="m9 14 2 2 4-4"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">Built by me</div><h3>ODK Supervision Checklists</h3><p>Checklists I built in ODK Central for ART Plus/SACEP, ICTC, SSK, SSS readiness and DSRC, with scoring and cascading facility lists.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">ODK Central</span><span class="chip">XLSForm</span><span class="chip">DigitalOcean</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></div>
+      <span class="tag">839 ART Centres</span></div>
+    <div class="body"><div class="grp">Built by me · 839 ART Centres</div><h3>Equipment Mapping Form</h3><p>Cascading State → District → ART Centre form for national equipment mapping.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">KoboToolbox</span><span class="chip">XLSForm</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg></div>
+      <span class="tag">In progress</span></div>
+    <div class="body"><div class="grp">Built by me · In progress</div><h3>Strategic Information e-Learning</h3><p>Co-developed a Moodle course for State and District SI Officers under NACP, on a server I set up and run.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Moodle</span><span class="chip">Articulate Rise</span><span class="chip">DigitalOcean</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M7 8h10M7 11h5"></path><circle cx="16" cy="15" r="2.5"></circle><path d="M14.8 17.2 14.5 21l1.5-.8 1.5.8-.3-3.8"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">Built by me</div><h3>Automated e-Certificates</h3><p>Personalised certificates created and emailed from Google Sheets and Slides.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Google Apps Script</span><span class="chip">Google Sheets</span><span class="chip">Google Slides</span><span class="chip">Gmail</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">Built by me</div><h3>Training Data Tool</h3><p>Excel VBA tool that compiles and cleans national and regional training session data.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Excel</span><span class="chip">VBA</span></div></div></div><div class="card proj lift">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4h6v3H9z"></path><path d="m9 14 2 2 4-4"></path></svg></div>
+      <span class="tag">180+ ART Centres</span></div>
+    <div class="body"><div class="grp">With partners · 180+ ART Centres</div><h3>ART Performance &amp; CSC Tools</h3><p>Vendor-built ODK supervision tools with automated action plans and Power BI dashboards. I led design, field testing, rollout and user guides.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">ODK Central</span><span class="chip">Power BI</span></div></div></div><div class="card proj lift">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></div>
+      <span class="tag">1,600+ downloads</span></div>
+    <div class="body"><div class="grp">With partners · 1,600+ downloads</div><h3>HIV Treatment Guidelines App</h3><p>Offline Android reference to a 556-page clinical guideline. Technical Manager from ToR and vendor selection to Play Store.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Android</span><span class="chip">Google Play</span><span class="chip">Security audit</span></div><div class="foot"><a href="https://treatandcareguide.naco.gov.in" target="_blank" rel="noopener">Visit →</a></div></div></div><div class="card proj lift">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"></path><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path></svg></div>
+      <span class="tag">Handed over to states</span></div>
+    <div class="body"><div class="grp">With partners · Handed over to states</div><h3>SAMVAAD AI Counselling App</h3><p>AI-enabled tablet app with 8 counselling modules on 13 HIV themes. Coordinated requirements, UAT and the handover to state health authorities.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Android tablet</span><span class="chip">AI</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5.3L4 16"></path><path d="M4 20v-4h4"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">With partners</div><h3>Paperless ART Action Plans</h3><p>Worked closely with the vendor to streamline ODK submissions into PDF action plans emailed to officials.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">ODK Central</span><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">Google Docs</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"></path><path d="M19 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">With partners</div><h3>SOCH Conversational AI</h3><p>Chatbot for programme managers to query national data in plain language. Defined requirements and ran UAT.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Conversational AI</span><span class="chip">RBAC</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></div>
+      <span class="tag">COVID-19 response</span></div>
+    <div class="body"><div class="grp">With partners · COVID-19 response</div><h3>ARTMitr IVRS</h3><p>Phone (IVRS) and SMS platform for people living with HIV during COVID-19. Coordinated requirements, UAT and rollout.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">IVRS</span><span class="chip">SMS</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12h4l2-4 3 8 2-4h7"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">With partners</div><h3>Nirantar Teleconsultation</h3><p>Virtual consultations, messaging and e-prescriptions for HIV clinicians. Supported requirements, testing and rollout.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Cloud platform</span><span class="chip">e-Prescription</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M7 6.5h.01M10 6.5h.01"></path></svg></div>
+      <span class="tag">Rolled out</span></div>
+    <div class="body"><div class="grp">With partners · Rolled out</div><h3>MAS Digital Modules</h3><p>QR-based ICTC self-registration and a digital contact directory, from scope to government acceptance.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">QR codes</span><span class="chip">Web app</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></div>
+      </div>
+    <div class="body"><div class="grp">With partners</div><h3>ART Adherence Tool</h3><p>Android app enhancements, testing and Play Store releases.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Android</span><span class="chip">Google Play</span></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M7 6.5h.01M10 6.5h.01"></path></svg></div>
+      <span class="tag">Founded 2026</span></div>
+    <div class="body"><div class="grp">Erada · Founded 2026</div><h3>Erada Digital Solutions</h3><p>Web apps, websites, Moodle LMS, ODK tools and dashboards for NGOs and programmes.</p>
+      <div class="foot"><a href="https://eradadigital.com" target="_blank" rel="noopener">Visit →</a></div></div></div><div class="card proj lift hide">
+    <div class="thumb"><div class="ph"><svg class="ico" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg></div>
+      <span class="tag">Free</span></div>
+    <div class="body"><div class="grp">Erada · Free</div><h3>Erada Learning</h3><p>Live, free learning platform with public-health courses. Additional courses in public health, digital health and programme management are being added.</p>
+      <div class="bw">Built with</div><div class="chips"><span class="chip">Moodle</span><span class="chip">Articulate</span></div><div class="foot"><a href="https://learn.eradadigital.com/" target="_blank" rel="noopener">Visit →</a></div></div></div></div>
   </div></section>
 
   <section id="experience"><div class="wrap">
     <div class="sec-head"><h2>Experience</h2><p>Earlier roles are summarised; open "Show more" for detail.</p></div>
-    <div class="tl" id="jobs"></div>
+    <div class="tl" id="jobs"><div class="job" id="job0"><div class="logo">UW</div><div class="card">
+      <div class="top"><div><h3>IT Manager – Digital Platforms &amp; Programme Technology</h3><div class="org">I-TECH India (University of Washington) <span class="note">· Consultant since April 2026</span></div></div>
+      <span class="when">Jul 2014 – Present · New Delhi</span></div>
+      <ul><li><b>Programme technology:</b> Technology lead for I-TECH India's NACP work under PEPFAR/HRSA, working with NACO, NIC, MoHFW and SACS from requirements to rollout.</li><li><b>Project &amp; vendor management:</b> Managed vendor-delivered projects from scope to handover (ToRs, vendor selection, contracts, UAT and government acceptance), including the HIV Treatment Guidelines app, SAMVAAD and the MAS digital modules.</li><li><b>IT operations:</b> Run IT across head office and state offices with 98%+ uptime: user support, servers, network, security, backups, maintenance contracts (AMCs/SLAs) and IT assets. Moved the organisation to Google Workspace.</li><li><b>Training delivery:</b> Led technical delivery of 1,000+ national and regional distance-learning sessions since 2014.</li><li><b>Field data:</b> Led design, field testing and rollout of vendor-built ODK supervision tools across 180+ ART Centres; built further ODK checklists myself and am now building one integrated ODK app.</li><li><b>Digital learning platform:</b> Built a platform with Google Gemini AI integration, now demonstrated in public health for wider adoption.</li><li class="more"><b>AI:</b> Piloted an AI agent for the National Guidelines for HIV Care and Treatment, with an ART Centre finder.</li><li class="more"><b>LMS:</b> Implemented and manage Moodle and Canvas for national training programmes.</li><li class="more"><b>Administration &amp; events:</b> IT procurement, logistics and AV for workshops and national meetings, and 10–12 NACO review meetings a month (set-up, recordings and minutes).</li><li class="more"><b>Documentation:</b> Wrote ToRs, IT policies, SOPs, disaster-recovery plans, UAT documents and user guides; built staff capacity on digital tools and cyber safety.</li><li class="more"><b>Proposals:</b> Led I-TECH India's 2026 technical proposal for a Bengali primary-teacher learning platform in West Bengal.</li></ul>
+      <button class="linkbtn" style="margin-top:6px" onclick="toggleJob(0,this)">Show 5 more</button></div></div><div class="job" id="job1"><div class="logo">EDS</div><div class="card">
+      <div class="top"><div><h3>Founder</h3><div class="org">Erada Digital Solutions</div></div>
+      <span class="when">2026 – Present · New Delhi</span></div>
+      <ul><li>Started Erada Digital Solutions to offer LMS, web, ODK and automation work to NGOs and public-health programmes.</li><li>Launched Erada Learning, a live, free learning platform with public-health courses; more courses are being added.</li><li>Scoped a bilingual Moodle LMS for a Delhi-area NGO.</li></ul>
+      </div></div><div class="job" id="job2"><div class="logo">FHI</div><div class="card">
+      <div class="top"><div><h3>IT Manager – Infrastructure &amp; Systems</h3><div class="org">FHI 360 (deputed via VVM Solutions)</div></div>
+      <span class="when">Nov 2012 – Jun 2014 · New Delhi</span></div>
+      <ul><li>Managed servers, Active Directory, networks, email and security across multiple FHI 360 offices.</li><li class="more">Ran the Cisco ASA 5500 firewall and supported users at the NACO office.</li><li class="more">Kept systems audit-ready with SOPs, asset records and backups.</li></ul>
+      <button class="linkbtn" style="margin-top:6px" onclick="toggleJob(2,this)">Show 2 more</button></div></div><div class="job" id="job3"><div class="logo">PF</div><div class="card">
+      <div class="top"><div><h3>IT Manager – EMR &amp; Clinic Systems</h3><div class="org">Pathfinder Health India</div></div>
+      <span class="when">Oct 2011 – Oct 2012 · New Delhi</span></div>
+      <ul><li>Rolled out the Easy Clinic EMR: testing, configuration, SQL backups and training for doctors.</li><li class="more">Managed IT for 60+ users across clinics with 98% internet uptime.</li><li class="more">Tested NFC smartphone integration for point-of-care patient data.</li></ul>
+      <button class="linkbtn" style="margin-top:6px" onclick="toggleJob(3,this)">Show 2 more</button></div></div><div class="job" id="job4"><div class="logo">ED</div><div class="card">
+      <div class="top"><div><h3>Production Support Manager / Account Manager</h3><div class="org">E-Dictate IT Solutions</div></div>
+      <span class="when">Mar 2003 – Oct 2011 · Pune</span></div>
+      <ul><li>Managed EMR/EHR documentation for US clients, delivering 40,000+ lines a day within quality and turnaround targets.</li><li class="more">Led a team of 21 across two departments: shifts, quality, hiring and training.</li><li class="more">Ran client meetings and supported remote staff on servers, network and applications.</li></ul>
+      <button class="linkbtn" style="margin-top:6px" onclick="toggleJob(4,this)">Show 2 more</button></div></div></div>
   </div></section>
 
   <section id="videos"><div class="wrap">
     <div class="sec-head"><h2>Solutions you can adopt</h2><p>Two working platforms, shown in short videos. Each can be set up for your organisation.</p></div>
-    <div class="grid cols2" id="videoGrid"></div>
-    <div class="cta card" id="demoCta"></div>
+    <div class="grid cols2" id="videoGrid"><div class="card vid"><div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/QWV5-Vd4gak?rel=0" title="AI-Powered Capacity Building &amp; Digital Learning Platform" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen" allowfullscreen=""></iframe></div><div class="body"><div class="chips" style="margin-bottom:7px"><span class="chip ok">Ready to adapt</span><span class="chip ok">For NGOs &amp; programmes</span></div><h3>AI-Powered Capacity Building &amp; Digital Learning Platform</h3><p>One secure platform for every step of a training programme, from scheduling and invitations to attendance and certificates, with AI that answers learners' questions. Already built and working; it can be set up, branded and adapted for your organisation or NGO.</p>
+      <a href="https://eradadigital.com" target="_blank" rel="noopener">See Erada Digital Solutions →</a></div></div><div class="card vid"><div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/qBaylqFazK0?rel=0" title="Moodle learning platform (LMS)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; fullscreen" allowfullscreen=""></iframe></div><div class="body"><div class="chips" style="margin-bottom:7px"><span class="chip ok">Live now</span><span class="chip ok">Ready to adapt</span></div><h3>Moodle learning platform (LMS)</h3><p>A 2-minute tour of Erada Learning, a live Moodle platform with step-by-step lessons and an end-of-module quiz with a pass mark. More courses are being added. The same set-up can be built for your staff or field-worker training, with your courses and branding.</p>
+      <a href="https://learn.eradadigital.com/" target="_blank" rel="noopener">Try the live platform →</a></div></div></div>
+    <div class="cta card" id="demoCta"><div><b>Want one of these for your organisation?</b><span>Tell me what you need and I'll show you a demo and how it would fit your programme.</span></div>
+    <a class="btn primary" href="mailto:info@eradadigital.com?subject=Demo%20request"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg> Request a demo</a></div>
   </div></section>
 
   <section id="tools"><div class="wrap">
     <div class="sec-head"><h2>Tools &amp; certifications</h2></div>
     <div class="split">
-      <div class="card"><h4 id="toolsHead"></h4><div id="toolRows"></div></div>
-      <div class="card" id="certCard"><h4 id="certHead"></h4><ul class="certs" id="certList"></ul>
-        <div style="margin-top:8px" id="certMore"></div><p class="edu" id="eduNote"></p></div>
+      <div class="card"><h4 id="toolsHead"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"></path></svg> Key tools</h4><div id="toolRows"><div class="trow"><span class="lbl">Learning</span><div class="chips"><span class="chip">Moodle</span><span class="chip">Canvas</span><span class="chip">Articulate Rise</span><span class="chip">Zoom</span><span class="chip">Adobe Connect</span></div></div><div class="trow"><span class="lbl">Data</span><div class="chips"><span class="chip">ODK Central</span><span class="chip">KoboToolbox</span><span class="chip">XLSForm</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Excel VBA</span></div></div><div class="trow"><span class="lbl">Build</span><div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">WordPress</span><span class="chip">Apps Script</span><span class="chip">REST APIs</span></div></div><div class="trow"><span class="lbl">AI</span><div class="chips"><span class="chip">Gemini API</span><span class="chip">DigitalOcean Gradient</span><span class="chip">RAG chatbots</span></div></div><div class="trow"><span class="lbl">Cloud &amp; IT</span><div class="chips"><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">DigitalOcean</span><span class="chip">NIC NGC Cloud</span><span class="chip">Linux</span><span class="chip">Google Workspace</span><span class="chip">Microsoft 365</span></div></div><div class="trow"><span class="lbl">Security</span><div class="chips"><span class="chip">Security audits (VAPT / Nessus)</span><span class="chip">Two-factor login &amp; role-based access</span><span class="chip">Active Directory</span><span class="chip">Cisco ASA</span><span class="chip">SonicWALL</span><span class="chip">Backup &amp; disaster recovery</span></div></div><div class="trow"><span class="lbl">Delivery</span><div class="chips"><span class="chip">Requirements &amp; specifications</span><span class="chip">User acceptance testing (UAT)</span><span class="chip">Vendor contracts &amp; SLAs</span><span class="chip">SOPs &amp; training</span><span class="chip">SMS &amp; IVRS platforms</span><span class="chip">Mailchimp</span></div></div></div></div>
+      <div class="card" id="certCard"><h4 id="certHead"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14 7 22l5-3 5 3-1.5-8"></path></svg> Certifications</h4><ul class="certs" id="certList"><li><span class="org">UW</span>
+    <div><div class="t">Strategic Applications of IT Project &amp; Program Management</div><div class="small">University of Washington</div></div></li><li><span class="org">UW</span>
+    <div><div class="t">Global Health Project Management</div><div class="small">University of Washington</div></div></li><li><span class="org">UW</span>
+    <div><div class="t">Leadership &amp; Management in Health</div><div class="small">University of Washington</div></div></li><li><span class="org">NIELIT</span>
+    <div><div class="t">Introduction to Agentic AI</div><div class="small">NIELIT</div></div></li><li><span class="org">CDAC</span>
+    <div><div class="t">Bootcamp on Machine Learning for Cyber Security</div><div class="small">CDAC</div></div></li><li><span class="org">ISRO</span>
+    <div><div class="t">Geodata Processing using Python and Machine Learning</div><div class="small">ISRO</div></div></li><li class="more"><span class="org">UW</span>
+    <div><div class="t">Monitoring and Evaluation in Global Health</div><div class="small">University of Washington</div></div></li><li class="more"><span class="org">UW</span>
+    <div><div class="t">Transforming Your Leadership and Management Skills</div><div class="small">University of Washington</div></div></li><li class="more"><span class="org">D4D</span>
+    <div><div class="t">Kobo Toolbox for Beginners</div><div class="small">Data for Development</div></div></li><li class="more"><span class="org">C</span>
+    <div><div class="t">Data Visualization</div><div class="small">Coursera / Global Health eLearning</div></div></li><li class="more"><span class="org">in</span>
+    <div><div class="t">LMS Foundations</div><div class="small">LinkedIn Learning</div></div></li><li class="more"><span class="org">GL</span>
+    <div><div class="t">AWS for Beginners</div><div class="small">Great Learning</div></div></li><li class="more"><span class="org">AP</span>
+    <div><div class="t">Certificate in Software Engineering</div><div class="small">Aptech Computers</div></div></li><li class="more"><span class="org">LC</span>
+    <div><div class="t">Certificate in Data Processing</div><div class="small">Lakhotia Computers</div></div></li></ul>
+        <div style="margin-top:8px" id="certMore"><button class="linkbtn" onclick="toggleCerts(this)">+ 8 more</button></div><p class="edu" id="eduNote">Education: BCA – Bachelor of Computer Applications, 2002</p></div>
     </div>
   </div></section>
 
@@ -281,19 +502,19 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     <div>
       <div class="sec-head" style="margin-bottom:8px"><h2>Get in touch</h2></div>
       <p class="lead">Hiring, consulting or collaborating: messages reach my inbox.</p>
-      <div class="clinks" id="contactLinks"></div>
-      <div class="sites" id="siteLinks"></div>
+      <div class="clinks" id="contactLinks"><a href="mailto:pravin0103@hotmail.com"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg> pravin0103@hotmail.com</a><a href="mailto:info@eradadigital.com"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg> info@eradadigital.com</a><a class="" href="https://www.linkedin.com/in/pravink-singh" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7h.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg> linkedin.com/in/pravink-singh</a></div>
+      <div class="sites" id="siteLinks"><a class="site" href="https://eradadigital.com" target="_blank" rel="noopener"><span class="ib"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span><span><b>Digital Solutions</b><span>eradadigital.com</span></span></a><a class="site" href="https://learn.eradadigital.com/" target="_blank" rel="noopener"><span class="ib"><svg class="ico" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path></svg></span><span><b>Learning Management Portal (LMS)</b><span>learn.eradadigital.com</span></span></a></div>
     </div>
     <form id="contactForm" class="card">
-      <div><label for="fName">Your name</label><input id="fName" name="name" required></div>
-      <div><label for="fEmail">Your email</label><input id="fEmail" name="email" type="email" required></div>
-      <div class="full"><label for="fMsg">Message</label><textarea id="fMsg" name="message" rows="4" required></textarea></div>
+      <div><label for="fName">Your name</label><input id="fName" name="name" required=""></div>
+      <div><label for="fEmail">Your email</label><input id="fEmail" name="email" type="email" required=""></div>
+      <div class="full"><label for="fMsg">Message</label><textarea id="fMsg" name="message" rows="4" required=""></textarea></div>
       <div class="full" style="display:flex;gap:12px"><button class="btn primary" type="submit">Send message</button><span id="formMsg"></span></div>
     </form>
   </div></section>
 </main>
-
-<footer><div class="wrap"><span id="copy"></span><span id="footNote"></span></div></footer>
+<footer><div class="wrap"><span id="copy">© 2026 Pravin Kumar Singh</span><span id="footNote">Designed and maintained by Pravin Kumar Singh</span></div></footer>
+<!--PR:end-->
 
 <script>
 /* ============ SETTINGS ============
@@ -321,6 +542,7 @@ const DEFAULT_DATA = {
   "learning_portal": "https://learn.eradadigital.com/",
   "learning_portal_label": "Learning Management Portal (LMS)",
   "phone": "",
+  "cv": "",
   "linkedin": "https://www.linkedin.com/in/pravink-singh",
   "github_user": "",
   "current_role": "IT Manager – Digital Platforms & Programme Technology",
@@ -842,6 +1064,7 @@ function render(D){
 
   let a = "";
   if (P.email) a += `<a class="btn primary" href="mailto:${esc(P.email)}">${icon("mail")} Email me</a>`;
+  if (P.cv) a += `<a class="btn" href="${esc(P.cv)}" download>${icon("down")} Download CV</a>`;
   if (P.linkedin) a += ext(P.linkedin, `${icon("linkedin")} LinkedIn`);
   if (P.github_user) a += ext(`https://github.com/${P.github_user}`, "GitHub");
   a += `<button class="btn" onclick="window.print()">${icon("down")} Save as PDF</button>`;
@@ -915,6 +1138,9 @@ function render(D){
   $("siteLinks").innerHTML = sites;
   $("contactLinks").innerHTML = c;
 
+  const dm = u => String(u || "").replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+  $("printHead").innerHTML = `<div><div class="pn">${esc(P.name)}</div><div class="pt">${esc(P.headline)}</div><div class="ps">${esc(P.tagline || "")}</div></div>
+    <div class="pc">${[P.location, P.email, P.email_2, P.linkedin && dm(P.linkedin), "pravin.eradadigital.com"].filter(Boolean).map(x => `<div>${esc(x)}</div>`).join("")}</div>`;
   $("copy").textContent = `© ${new Date().getFullYear()} ${P.name}`;
   $("footNote").textContent = [P.built_with || "", SHEET_API ? P.footer_note : ""].filter(Boolean).join(" · ");
   window.__EMAIL = P.email;
@@ -930,11 +1156,11 @@ function renderProjects(){
     const n = t === "Highlights" ? featured.length : t === "All" ? ps.length : ps.filter(p => p.group === t).length;
     return `<button class="tab${t === TAB ? " on" : ""}" onclick="setTab('${esc(t)}')">${esc(t)}<span>${n}</span></button>`;
   }).join("");
-  const shown = TAB === "Highlights" ? featured : TAB === "All" ? ps : ps.filter(p => p.group === TAB);
-  $("projGrid").innerHTML = shown.map(p => `<div class="card proj lift">
+  const inTab = p => TAB === "All" || (TAB === "Highlights" ? /^y/i.test(String(p.featured || "")) : p.group === TAB);
+  $("projGrid").innerHTML = ps.map(p => `<div class="card proj lift${inTab(p) ? "" : " hide"}">
     <div class="thumb">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : `<div class="ph">${icon(p.icon)}</div>`}
       ${p.badge ? `<span class="tag">${esc(p.badge)}</span>` : ""}</div>
-    <div class="body"><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p>
+    <div class="body"><div class="grp">${esc(p.group)}${p.badge ? ` · ${esc(p.badge)}` : ""}</div><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p>
       ${p.tags ? `<div class="bw">Built with</div>${chips(p.tags)}` : ""}${p.link ? `<div class="foot"><a href="${esc(p.link)}" target="_blank" rel="noopener">Visit →</a></div>` : ""}</div></div>`).join("");
 }
 function setTab(t){ TAB = t; renderProjects(); }
@@ -970,9 +1196,6 @@ $("contactForm").addEventListener("submit", async ev => {
   } catch (e) { msg.textContent = "Could not send. Please email me directly."; }
 });
 
-/* Print: show every project */
-window.addEventListener("beforeprint", () => { if (TAB !== "All") { window.__tab = TAB; setTab("All"); } });
-window.addEventListener("afterprint", () => { if (window.__tab) { setTab(window.__tab); window.__tab = null; } });
 
 /* Theme */
 const savedTheme = (() => { try { return localStorage.getItem("theme"); } catch (e) { return null; } })();
