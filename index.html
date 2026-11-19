@@ -308,6 +308,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .proj .bw{margin:0 3px 0 0;font-size:8.5px}
   .proj{padding:6px 9px!important}
   #tools .card{break-inside:avoid}
+  /* never split a card or orphan a heading */
+  .svc,.proj,.trow,.certs li,.job li,.vid{break-inside:avoid;page-break-inside:avoid}
+  .sec-head,h2,h3,h4{break-after:avoid;page-break-after:avoid}
+  #services .grid,#projects .grid{display:grid}
+  #services{break-inside:avoid;page-break-inside:avoid}
 }
 </style>
 </head>
